@@ -1,0 +1,5 @@
+(mose | mouse): user.mouse_toggle_control_mouse()
+name: mouse_scroll(-250)
+soap: mouse_scroll(250)
+move left: mouse_scroll(0, -250)
+move right: mouse_scroll(0, 250)
