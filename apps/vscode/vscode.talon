@@ -16,15 +16,13 @@ define show: user.vscode("editor.action.revealDefinition")
 define peek: user.vscode("editor.action.peekDefinition")
 define side: user.vscode("editor.action.revealDefinitionAside")
 
-fold one: key(cmd-k cmd-1)
-fold two: key(cmd-k cmd-2)
-fold three: key(cmd-k cmd-3)
-fold four: key(cmd-k cmd-4)
-fold five: key(cmd-k cmd-5)
-fold six: key(cmd-k cmd-6)
-fold seven: key(cmd-k cmd-7)
-fold eight: key(cmd-k cmd-8)
-fold nine: key(cmd-k cmd-9)
+fold one: user.vscode("editor.foldLevel1")
+fold two: user.vscode("editor.foldLevel2")
+fold three: user.vscode("editor.foldLevel3")
+fold four: user.vscode("editor.foldLevel4")
+fold five: user.vscode("editor.foldLevel5")
+fold six: user.vscode("editor.foldLevel6")
+fold seven: user.vscode("editor.foldLevel7")
 
 # personalised actions and extensions
 file copy local: user.vscode("copyRelativeFilePath")
@@ -53,14 +51,11 @@ meta: key(alt-/)
 sel meta: key(alt-shift-/)
 sel top: key(ctrl-o)
 sel line: key(ctrl-l)
+sel flip: user.vscode("vscodeSelectionFlip.flip")
 (curser | cursor): key(cmd-d)
-sel flip: key(cmd-shift-\)
-go forward: key(ctrl-shift--)
-go back: key(ctrl--)
 go middle: key(alt-m)
 go top: key(alt-t)
 go bottom: key(alt-b)
-# definition: key(f12)
 toggle scope: key(cmd-shift-\)
 
 
@@ -76,6 +71,9 @@ break restart: key(cmd-shift-fn-f5)
 
 toggle output: user.vscode("workbench.action.output.toggleOutput")
 toggle search details: user.vscode("workbench.action.search.toggleQueryDetails")
+replace confirm all: key(cmd-alt-enter)
+
+toggle fire: user.vscode("cursorless.toggleDecorations")
 
 # code run without debugging
 code run: key(ctrl-alt-n)
@@ -84,8 +82,8 @@ code stop: key(ctrl-alt-m)
 # ember
 ember relevant: key(cmd-shift-r)
 rails relevant: key(alt-r)
-bread crumb: key(cmd-shift-.) 
-# alt-left and alt-right - to navigate the bread crumbs
+select breadcrumb: user.vscode('breadcrumbs.focusAndSelect')
+# Use `alt-left` and `alt-right` to navigate the bread crumb
 
 command set up worker: "message = JSON.parse(JSON.stringify(message));"
 git blame: user.vscode("gitlens.toggleFileBlame")
