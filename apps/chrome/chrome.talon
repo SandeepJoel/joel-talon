@@ -2,6 +2,10 @@ os: mac
 app: chrome
 -
 
+# Need to debug why the below commands were not working by default
+zoom in: key(cmd-=)
+zoom out: key(cmd--)
+
 hunt this: key(cmd-f)
 settings: key(cmd-,)
 reveal: key(cmd-shift-p)
@@ -21,7 +25,6 @@ tab right: key(cmd-])
 
 command retest this please: 'retest this please'
 
-link google: 'https://www.google.com/'
 link local: 'http://localhost.freshdesk-dev.com:4200/'
 link joel: 'http://joel.freshdesk-dev.com/'
 link user interface: "https://userinterface.freshdesk.com/"
@@ -35,11 +38,32 @@ chrome fake filler: key(cmd-shift-d)
 chrome search: key(cmd-shift-a)
 chrome one tab display: key(alt-shift-1)
 chrome one tab current: key(alt-shift-2)
-chrome sticky header: key(alt-shift-h)
-chrome full page: key(alt-shift-g)
+chrome full page: key(alt-shift-p)
+chrome translate: key(alt-shift-t)
 
 # url
 path bootstrap: 'api/_/bootstrap/'
 path account: 'api/_/bootstrap/account/'
 
 query dev: "?dev=true"
+
+template hello sir:
+  insert("Hello Sir,")
+  key(enter)
+  sleep(50ms)
+  key(space)
+  key(space)
+  key(space)
+  key(space)
+  key(space)
+  key(space)
+template hello madam:
+  insert("Hello Madam,")
+  key(enter)
+  sleep(50ms)
+  key(space)
+  key(space)
+  key(space)
+  key(space)
+  key(space)
+  key(space)

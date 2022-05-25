@@ -6,6 +6,7 @@ tag(): user.git
 # tag(): user.kubectl
 tag(): user.tabs
 tag(): terminal
+tag(): user.splits
 
 action(user.file_manager_open_parent):
     insert("cd ..")
@@ -37,42 +38,24 @@ resume:
   insert("fg")
   key(enter)
 slap: key(ctrl--)
-clear: key(ctrl-u)
 redo: key(ctrl-y)
 clean that: key(cmd-k)
-# scroll up: key(cmd-up)
-# scroll down: key(cmd-down)
 go in: "cd ./\t"
 go out: "cd ./../\n"
-go to joel: "/Users/sjoel/myfiles/Mr.J5.0/personal-projects\n"
+go to projects: "/Users/sjoel/myfiles/Mr.J5.0/projects\n"
 go to talon: "go_to_talon\n"
 go to freshdesk: "go_to_freshdesk\n"
 
-copy: "cp "
 output copy: key(cmd-shift-a)
-move: "mv "
-remove: "rm "
 remove everything: "rm -rf "
-list: "ls\n"
-list all: "ls -all\n"
+
 folder new: "mkdir "
 folder delete: "rmdir "
 
-yarn install: "yarn install\n"
-yarn start: "yarn start\n"
-yarn add dev: "yarn add --dev "
-yarn inspect: "yarn inspect\n"
-yarn start: "yarn start\n"
-yarn test: "yarn test\n"
-yarn watch build: "yarn watch-build\n"
-node install: "npm install "
-node run: "npm run "
-node list: "nvm list\n"
 node ex: "npx "
-node initiate: "npm init"
+
 location: "pwd\n"
 sudo: "sudo "
-cat: "cat "
 alias: "alias "
 go to: "go_to_\t"
 go back: "cd - \n"
@@ -94,7 +77,10 @@ brew services list: "brew services list"
 memcached: "memcached"
 global start: "launchctl load /Library/LaunchAgents/com.paloaltonetworks.gp.pangp*"
 global stop: "launchctl unload /Library/LaunchAgents/com.paloaltonetworks.gp.pangp*"
-split down: key(cmd-shift-d)
+action(user.split_window_down):
+  key(cmd-shift-d)
+action(user.split_window_right):
+  key(cmd-d)
 expand: key(cmd-shift-enter)
 hunt this: key(cmd-f)
 narco: mouse_scroll(-1000)
@@ -107,7 +93,38 @@ ember generate: "npx ember generate "
 ember destroy: "npx ember destroy "
 ember generate route: "npx ember generate route "
 ember destroy route: "npx ember destroy route "
-ember generate component: "npx ember generate component "
+ember generate component: "npx ember generate component -gc"
 ember destroy component: "npx ember destroy component "
 ember generate adapter: "npx ember generate adapter "
 ember generate help: "npx ember generate --help"
+
+broadcast: key(cmd-alt-i)
+close all: key(cmd-alt-w)
+arrange one: 
+  key(alt-shift-d)
+arrange two: 
+  key(alt-shift-b)
+arrange three: 
+  key(alt-shift-t)
+
+pattern stash: 
+  insert("stash@{}")
+  key(left)
+
+yarn pyramid freshdesk: "yarn pyramid-proxy --include=freshdesk"
+yarn install: "yarn install"
+
+clear line:
+  key(ctrl-u)
+draw:
+  key(alt-b)
+spring:
+  key(alt-f)
+clear:
+  key(alt-backspace)
+swallow:
+  key(alt-d)
+home:
+  key(ctrl-a)
+end:
+  key(ctrl-e)

@@ -16,20 +16,7 @@ define show: user.vscode("editor.action.revealDefinition")
 define peek: user.vscode("editor.action.peekDefinition")
 define side: user.vscode("editor.action.revealDefinitionAside")
 
-fold one: user.vscode("editor.foldLevel1")
-fold two: user.vscode("editor.foldLevel2")
-fold three: user.vscode("editor.foldLevel3")
-fold four: user.vscode("editor.foldLevel4")
-fold five: user.vscode("editor.foldLevel5")
-fold six: user.vscode("editor.foldLevel6")
-fold seven: user.vscode("editor.foldLevel7")
-
 # personalised actions and extensions
-file copy local: user.vscode("copyRelativeFilePath")
-close other tabs: user.vscode("workbench.action.closeOtherEditors")
-close all: user.vscode("workbench.action.closeAllEditors")
-close tabs to the right: user.vscode("workbench.action.closeEditorsToTheRight")
-close tabs to the left: user.vscode("workbench.action.closeEditorsToTheLeft")
 collapse files: user.vscode("workbench.files.action.collapseExplorerFolders") 
 clean that: key(cmd-alt-u)
 salt that: key(fn-f4)
@@ -82,7 +69,6 @@ code stop: key(ctrl-alt-m)
 # ember
 ember relevant: key(cmd-shift-r)
 rails relevant: key(alt-r)
-select breadcrumb: user.vscode('breadcrumbs.focusAndSelect')
 # Use `alt-left` and `alt-right` to navigate the bread crumb
 
 command set up worker: "message = JSON.parse(JSON.stringify(message));"
@@ -90,3 +76,6 @@ git blame: user.vscode("gitlens.toggleFileBlame")
 toggle wrapper: key(cmd-')
 
 regex till new line: "(.|\\n)*"
+
+name: mouse_scroll(-150)
+soap: mouse_scroll(150)
