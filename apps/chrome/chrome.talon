@@ -67,3 +67,5 @@ template hello madam:
   key(space)
   key(space)
   key(space)
+
+toggle tree: key(cmd-shift-s)

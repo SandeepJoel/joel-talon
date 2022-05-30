@@ -1,6 +1,10 @@
 
 app: vscode
 -
+tag(): user.emoji
+tag(): user.npm
+tag(): user.yarn
+tag(): user.git
 
 reveal [<user.text>]:
     user.vscode("workbench.action.showCommands")
@@ -18,7 +22,7 @@ define side: user.vscode("editor.action.revealDefinitionAside")
 
 # personalised actions and extensions
 collapse files: user.vscode("workbench.files.action.collapseExplorerFolders") 
-clean that: key(cmd-alt-u)
+clear output: key(cmd-alt-u)
 salt that: key(fn-f4)
 salt back: key(shift-fn-f4)
 
@@ -71,7 +75,7 @@ ember relevant: key(cmd-shift-r)
 rails relevant: key(alt-r)
 # Use `alt-left` and `alt-right` to navigate the bread crumb
 
-command set up worker: "message = JSON.parse(JSON.stringify(message));"
+command setup worker: "message = JSON.parse(JSON.stringify(message));"
 git blame: user.vscode("gitlens.toggleFileBlame")
 toggle wrapper: key(cmd-')
 

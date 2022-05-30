@@ -27,6 +27,8 @@ reverse that: edit.redo()
 paste match: edit.paste_match_style()
 file save: edit.save()
 
+brightness up: key(brightness_up)
+brightness down: key(brightness_down)
 spotlight: key(cmd-space)
 wipe: key(backspace)
 pull: key(fn-del)
