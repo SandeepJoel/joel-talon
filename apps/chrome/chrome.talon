@@ -15,6 +15,8 @@ add (curser | cursor): key(fn-f7)
 
 # debugger
 clean that: key(cmd-k)
+clean network: 
+  key(cmd-e cmd-e)
 break next: key(cmd-')
 break in: key(cmd-;)
 break out: key(cmd-shift-;)

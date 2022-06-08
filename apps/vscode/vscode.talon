@@ -1,10 +1,9 @@
-
 app: vscode
 -
-tag(): user.emoji
-tag(): user.npm
-tag(): user.yarn
-tag(): user.git
+# tag(): user.emoji
+# tag(): user.npm
+# tag(): user.yarn
+# tag(): user.git
 
 reveal [<user.text>]:
     user.vscode("workbench.action.showCommands")
@@ -19,6 +18,7 @@ file delete:
 define show: user.vscode("editor.action.revealDefinition")
 define peek: user.vscode("editor.action.peekDefinition")
 define side: user.vscode("editor.action.revealDefinitionAside")
+forward: user.vscode("workbench.action.navigateForward")
 
 # personalised actions and extensions
 collapse files: user.vscode("workbench.files.action.collapseExplorerFolders") 
@@ -80,6 +80,6 @@ git blame: user.vscode("gitlens.toggleFileBlame")
 toggle wrapper: key(cmd-')
 
 regex till new line: "(.|\\n)*"
-
+# image preview: user.vscode("svgPreview.showPreviewToSide")
 name: mouse_scroll(-150)
 soap: mouse_scroll(150)

@@ -113,7 +113,7 @@ curse no:
     # Command added 2021-12-13, can remove after 2022-06-01
     app.notify("Please activate the user.mouse_cursor_commands_enable tag to enable this command")
 
-name: mouse_scroll(-250)
-soap: mouse_scroll(250)
+name: mouse_scroll(-500)
+soap: mouse_scroll(500)
 move left: mouse_scroll(0, -250)
 move right: mouse_scroll(0, 250)
