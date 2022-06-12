@@ -25,7 +25,7 @@ break stop: key(cmd-f8)
 tab left: key(cmd-[)
 tab right: key(cmd-])
 
-command retest this please: 'retest this please'
+
 
 link local: 'http://localhost.freshdesk-dev.com:4200/'
 link joel: 'http://joel.freshdesk-dev.com/'
@@ -71,3 +71,17 @@ template hello madam:
   key(space)
 
 toggle tree: key(cmd-shift-s)
+close tabs way left: key(alt-shift-l)
+close tabs way right: key(alt-shift-r)
+close other tabs: key(alt-shift-w)
+toggle tab pin: key(ctrl-cmd-p)
+
+
+# Office specific
+pattern retest this please: 'retest this please'
+pattern retest coverity: "retest coverity"
+pattern retest bundle: "retest bundle size"
+pattern retest default: "retest default"
+pattern retest linters: "retest linters"
+pattern retest threads: "retest threads-addon"
+pattern retest common: "retest common-addon"

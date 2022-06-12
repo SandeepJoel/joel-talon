@@ -33,11 +33,15 @@ mark prev: key(cmd-alt-,)
 # the below command will delete all bookmarks from all files
 mark delete: key(cmd-alt-\) 
 comment: key(cmd-/)
-project: key(cmd-alt-p)
+project: user.vscode('workbench.action.openRecent')
+project [<user.text>]: 
+  user.vscode("workbench.action.openRecent")
+  insert(user.text)
+  key(enter)
 add log: key(ctrl-alt-l)
 google that: key(ctrl-alt-g)
 tab new: key(cmd-n)
-
+toggle tab pin: key(cmd-k shift-enter)
 meta: key(alt-/)
 sel meta: key(alt-shift-/)
 sel top: key(ctrl-o)
@@ -79,7 +83,7 @@ command setup worker: "message = JSON.parse(JSON.stringify(message));"
 git blame: user.vscode("gitlens.toggleFileBlame")
 toggle wrapper: key(cmd-')
 
-regex till new line: "(.|\\n)*"
+pattern till new line: "(.|\\n)*"
 # image preview: user.vscode("svgPreview.showPreviewToSide")
 name: mouse_scroll(-150)
 soap: mouse_scroll(150)

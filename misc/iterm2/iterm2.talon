@@ -5,11 +5,11 @@ tag(): user.splits
 
 broadcast: key(cmd-alt-i)
 close all panes: key(cmd-alt-w)
-arrange one: 
+arrangement one: 
   key(alt-shift-d)
-arrange two: 
+arrangement two: 
   key(alt-shift-b)
-arrange three: 
+arrangement three: 
   key(alt-shift-t)
 action(user.split_window_down):
   key(cmd-shift-d)

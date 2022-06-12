@@ -30,6 +30,7 @@ command copy: key(ctrl-alt-cmd-c)
 vim mode copy: key(ctrl-alt-cmd-c)
 remove everything: "rm -rf "
 
+list all: "ls -all"
 folder new: "mkdir "
 folder delete: "rmdir "
 
@@ -104,3 +105,5 @@ end:
   # key(alt-d)
 
 print echo: user.insert_between("echo \"", "\"")
+talon open log: "/Users/sjoel/.talon/.venv/bin/tail_log ; exit;\n"
+talon open repl: "/Users/sjoel/.talon/.venv/bin/repl ; exit;\n"
