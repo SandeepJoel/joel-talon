@@ -75,6 +75,7 @@ close tabs way left: key(alt-shift-l)
 close tabs way right: key(alt-shift-r)
 close other tabs: key(alt-shift-w)
 toggle tab pin: key(ctrl-cmd-p)
+toggle tab numbers: key(ctrl-space)
 
 
 # Office specific

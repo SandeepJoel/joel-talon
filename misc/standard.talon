@@ -21,30 +21,45 @@ scroll down: edit.page_down()
 
 copy that: edit.copy()
 cut that: edit.cut()
-paste that: edit.paste()
-paste dell:
+(pace | paste) that: edit.paste()
+(pace | paste) del:
   edit.paste()
   key(enter)
 slap: edit.undo()
-reverse that: edit.redo()
+yes indeed: edit.redo()
 paste match: edit.paste_match_style()
 file save: edit.save()
 
 brightness up: key(brightness_up)
 brightness down: key(brightness_down)
 alfred: key(cmd-space)
+alfred [<user.text>]:
+  key(cmd-space)
+  sleep(25ms)
+  insert(user.text or "")
+  key(enter)
+
+fly fast: key(escape escape)
 wipe: key(backspace)
 pull: key(fn-del)
 shoot: key(tab)
 shoot back: key(shift-tab)
-dell: key(enter)
-dell back: key(shift-enter)
+del: key(enter)
+del back: key(shift-enter)
 # show menu: key(ctrl-fn-f2)
 # show status: key(ctrl-fn-f8)
-# below vimac command
-(gustav | month): key(fn-f5)
-scroll mode: key(fn-f6)
 
+key(ctrl-alt-cmd-space): speech.disable()
+key(ctrl-alt-cmd-a): speech.enable()
+# key(ctrl-alt-cmd-m) to switch mic
+
+# below commands for vimac 
+month: key(fn-f5)
+# scroll mode: key(fn-f6)
+^hold <user.modifier_with_keys>: key(modifier_with_keys)
+
+boolean false: "false"
+boolean true: "true"
 padding: 
 	insert("  ") 
 	key(left)

@@ -30,7 +30,6 @@ go line end:
 
 (go way left | home):
     edit.line_start()
-    edit.line_start()
 
 (go way right | end):
     edit.line_end()
@@ -119,7 +118,7 @@ clear:
     edit.extend_word_left()
     edit.delete()
 
-(clear word right | swallow):
+clear word right:
     edit.extend_word_right()
     edit.delete()
 
@@ -210,3 +209,10 @@ cut word right:
 cut line:
     edit.select_line()
     edit.cut()
+
+swallow:
+  user.swallow()
+
+(paste | pace) all:
+  edit.select_all()
+  edit.paste()

@@ -4,17 +4,19 @@ app: vscode
 # tag(): user.npm
 # tag(): user.yarn
 # tag(): user.git
+tag(): user.cursorless_experimental_snippets
 
 reveal [<user.text>]:
     user.vscode("workbench.action.showCommands")
     insert(user.text or "")
-file duplicate:
-	user.vscode("fileutils.duplicateFile")
-	sleep(150ms)
+file hunt (pace | paste):
+  user.vscode("workbench.action.quickOpen")
+  sleep(25ms)
+  edit.paste()
 file delete:
   user.vscode("fileutils.removeFile")
   sleep(150ms)
-
+file copy name: user.vscode("fileutils.copyFileName")
 define show: user.vscode("editor.action.revealDefinition")
 define peek: user.vscode("editor.action.peekDefinition")
 define side: user.vscode("editor.action.revealDefinitionAside")
@@ -42,7 +44,7 @@ add log: key(ctrl-alt-l)
 google that: key(ctrl-alt-g)
 tab new: key(cmd-n)
 toggle tab pin: key(cmd-k shift-enter)
-meta: key(alt-/)
+# meta: key(alt-/)
 sel meta: key(alt-shift-/)
 sel top: key(ctrl-o)
 sel line: key(ctrl-l)
@@ -85,5 +87,7 @@ toggle wrapper: key(cmd-')
 
 pattern till new line: "(.|\\n)*"
 # image preview: user.vscode("svgPreview.showPreviewToSide")
+preview markdown: user.vscode("markdown.showPreview")
 name: mouse_scroll(-150)
 soap: mouse_scroll(150)
+(num|numb) <user.number_key>: key(number_key)

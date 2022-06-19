@@ -86,10 +86,11 @@ vimium
 lookup, look up
 command
 upgrade
-false,falls
 input,in put
 above,hobo
 below,billow
 timezone,times on
 screenshot, screen short
 cursorless, cursor less
+restart
+talon, talon

@@ -30,7 +30,7 @@ command copy: key(ctrl-alt-cmd-c)
 vim mode copy: key(ctrl-alt-cmd-c)
 remove everything: "rm -rf "
 
-list all: "ls -all"
+list all: "ls -all\n"
 folder new: "mkdir "
 folder delete: "rmdir "
 
@@ -54,6 +54,7 @@ rails console: "bundle exec rails c\n"
 make current: "Account.find(1).make_current"
 account current: "Account.current."
 show process: "ps -ax | grep "
+show port process: "lsof -t -i:3000"
 kill process: "kill -9 "
 kill port process: "kill -9 $(lsof -t -i:3000)"
 find bundle name: 
@@ -61,8 +62,8 @@ find bundle name:
 
 brew services list: "brew services list" 
 memcached: "memcached"
-global start: "launchctl load /Library/LaunchAgents/com.paloaltonetworks.gp.pangp*"
-global stop: "launchctl unload /Library/LaunchAgents/com.paloaltonetworks.gp.pangp*"
+global start: "launchctl load /Library/LaunchAgents/com.paloaltonetworks.gp.pangp* \n"
+global stop: "launchctl unload /Library/LaunchAgents/com.paloaltonetworks.gp.pangp* \n"
 
 open code here: "code .\n"
 hunt this: key(cmd-f)
@@ -84,26 +85,19 @@ ember generate adapter: "npx ember generate adapter "
 ember generate help: "npx ember generate --help"
 
 pattern stash: 
-  insert("stash@{}")
-  key(left)
-
+  user.insert_between("stash@{", "}")
+  
+# https://ss64.com/osx/syntax-bashkeyboard.html
 clear line:
   key(ctrl-u)
-# draw:
-#   key(alt-b)
-# spring:
-#   key(alt-f)
+
+# How the below command works correctly without setting any context?
 clear:
   key(alt-backspace)
+
 home:
   key(ctrl-a)
 end:
   key(ctrl-e)
 
-# Need to debug why this below command alone was not over written and always taken from generic editor
-# swallow:
-  # key(alt-d)
-
 print echo: user.insert_between("echo \"", "\"")
-talon open log: "/Users/sjoel/.talon/.venv/bin/tail_log ; exit;\n"
-talon open repl: "/Users/sjoel/.talon/.venv/bin/repl ; exit;\n"
