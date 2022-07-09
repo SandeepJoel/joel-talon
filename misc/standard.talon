@@ -22,7 +22,7 @@ scroll down: edit.page_down()
 copy that: edit.copy()
 cut that: edit.cut()
 (pace | paste) that: edit.paste()
-(pace | paste) del:
+(pace | paste) (del|enter):
   edit.paste()
   key(enter)
 slap: edit.undo()
@@ -60,6 +60,14 @@ month: key(fn-f5)
 
 boolean false: "false"
 boolean true: "true"
+
+# url
+pattern bootstrap: 'api/_/bootstrap/'
+pattern bootstrap me: 'api/_/bootstrap/me'
+pattern account: 'api/_/bootstrap/account/'
+pattern current: './'
+pattern parent: '../'
+
 padding: 
 	insert("  ") 
 	key(left)
@@ -91,9 +99,11 @@ tag div:
 
 unhide files: key(cmd-shift-.)
 email one: 'joeltheking00000001@gmail.com'
-email two: 'sandeep.joel@freshworks.com'
+email office: 'sandeep.joel@freshworks.com'
 email three: 'sjoel@freshworks.com'
+email official: 'sandeepjoelofficial@gmail.com'
 email support: 'support@freshdesk.com'
+email temporary: 'tajotoy761@hekarro.com'
 email manager: 'maya.skumar@freshworks.com'
 full name joel: 'A Sandeep Joel'
 mobile joel: '9445484948'

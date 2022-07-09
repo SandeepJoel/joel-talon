@@ -9,6 +9,12 @@ zoom out: key(cmd--)
 hunt this: key(cmd-f)
 settings: key(cmd-,)
 reveal: key(cmd-shift-p)
+reveal [<user.text>]:
+  key(cmd-shift-p)
+  sleep(50ms)
+  insert(user.text or "")
+  sleep(50ms)
+  key(enter)
 file hunt: key(cmd-p)
 youtube that: key(alt-s)
 add (curser | cursor): key(fn-f7)
@@ -42,10 +48,6 @@ chrome one tab display: key(alt-shift-1)
 chrome one tab current: key(alt-shift-2)
 chrome full page: key(alt-shift-p)
 chrome translate: key(alt-shift-t)
-
-# url
-path bootstrap: 'api/_/bootstrap/'
-path account: 'api/_/bootstrap/account/'
 
 query dev: "?dev=true"
 
@@ -86,3 +88,6 @@ pattern retest default: "retest default"
 pattern retest linters: "retest linters"
 pattern retest threads: "retest threads-addon"
 pattern retest common: "retest common-addon"
+
+pattern select tickets: "select * from helpdesk_tickets where account_id="
+pattern select tickets where: "select * from helpdesk_tickets where account_id= and helpdesk_tickets.display_id="

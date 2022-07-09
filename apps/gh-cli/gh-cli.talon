@@ -1,6 +1,13 @@
 tag: user.gh
 -
 
+# you can find the configuration files in /Users/sjoel/.config/gh/hosts.yml
+hub personal: "gh personal\n"
+hub office: "gh office\n"
+hub auth login: "gh auth login\n"
+hub auth status: "gh auth status\n"
+hub auth logout: "gh auth logout "
+hub repo create: "gh repo create "
 hub review request: "gh search prs --state=open --review-requested=@me\n"
 hub pull mine: "gh pr list --search 'author:SandeepJoelFreshdesk'\n"
 hub pull list: "gh pr list "

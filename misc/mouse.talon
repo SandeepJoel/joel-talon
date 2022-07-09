@@ -114,6 +114,10 @@ curse no:
     app.notify("Please activate the user.mouse_cursor_commands_enable tag to enable this command")
 
 name: mouse_scroll(-500)
-soap: mouse_scroll(500)
+frog: mouse_scroll(500)
 move left: mouse_scroll(0, -250)
 move right: mouse_scroll(0, 250)
+move big left: mouse_scroll(0, -1000)
+move big right: mouse_scroll(0, 1000)
+move small left: mouse_scroll(0, -600)
+move small right: mouse_scroll(0, 600)

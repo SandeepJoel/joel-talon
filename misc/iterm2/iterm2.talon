@@ -5,12 +5,16 @@ tag(): user.splits
 
 broadcast: key(cmd-alt-i)
 close all panes: key(cmd-alt-w)
-arrangement one: 
+arrangement debug: 
   key(alt-shift-d)
-arrangement two: 
+arrangement backend: 
   key(alt-shift-b)
-arrangement three: 
+arrangement talon: 
   key(alt-shift-t)
+arrangement current: 
+  key(alt-shift-r)
+arrangement save: 
+  key(cmd-shift-s)
 action(user.split_window_down):
   key(cmd-shift-d)
 action(user.split_window_right):

@@ -33,7 +33,7 @@ git clean force: "git clean -df"
 git clean dry: "git clean -n -d"
 git commit message <user.text>: "git commit -m '{text}'"
 git commit message:
-  insert("git commit -m ''")
+  insert('git commit -m "Add "')
   key(left)
 git commit: "git commit\n"
 git commit amend: "git commit --amend\n"
@@ -89,6 +89,8 @@ git remote: "git remote "
 git remote list: "git remote -v\n"
 git remote add: "git remote add "
 git remote set url: "git remote set-url "
+git remote set url origin: 
+  user.insert_between("git remote set-url origin git@github-personal:SandeepJoel/",".git")
 git remote add upstream: "git remote add upstream "
 git remote remove: "git remote remove "
 git remote show origin: "git remote show origin\n"

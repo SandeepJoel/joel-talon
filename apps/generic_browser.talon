@@ -1,5 +1,7 @@
 tag: browser
 -
+tag(): user.find_and_replace
+tag(): user.emoji
 
 ^address$: browser.focus_address()
 [go] forward: 

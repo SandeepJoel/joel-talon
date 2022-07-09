@@ -216,3 +216,8 @@ swallow:
 (paste | pace) all:
   edit.select_all()
   edit.paste()
+
+(paste | pace) all (enter|del):
+  edit.select_all()
+  edit.paste()
+  key(enter)

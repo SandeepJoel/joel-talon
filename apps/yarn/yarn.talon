@@ -22,3 +22,4 @@ yarn global list <number_small>: "yarn global list --depth={number_small}\n"
 yarn watch build: "yarn watch-build\n"
 
 yarn pyramid freshdesk: "yarn pyramid-proxy --include=freshdesk\n"
+yarn cash clean: "yarn cache clean"

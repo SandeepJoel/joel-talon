@@ -120,6 +120,11 @@ formatters_dict = {
         if i == 0 or word not in words_to_keep_lowercase
         else word,
     ),
+    "QUOTED_LIST": (
+        NOSEP,
+        lambda i, word, _:
+        "'" + word + "'" if i == 0 else ", " + "'" + word + "'"
+    )
 }
 
 # This is the mapping from spoken phrases to formatters
@@ -139,6 +144,7 @@ formatters_words = {
     "snake": formatters_dict["SNAKE_CASE"],
     "string": formatters_dict["SINGLE_QUOTED_STRING"],
     "title": formatters_dict["CAPITALIZE_ALL_WORDS"],
+    "connect string": formatters_dict["QUOTED_LIST"]
 }
 
 all_formatters = {}
