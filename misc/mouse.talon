@@ -1,4 +1,36 @@
 ^(mose | mouse): user.mouse_toggle_control_mouse()
+^point move: 
+  user.mouse_toggle_control_mouse()
+  sleep(600ms)
+  user.mouse_toggle_control_mouse()
+^point click: 
+  user.mouse_toggle_control_mouse()
+  sleep(800ms)
+  user.mouse_toggle_control_mouse()
+  mouse_click(0)
+^point dubclick: 
+  user.mouse_toggle_control_mouse()
+  sleep(600ms)
+  user.mouse_toggle_control_mouse()
+  mouse_click()
+	mouse_click()  
+^point tripclick: 
+  user.mouse_toggle_control_mouse()
+  sleep(600ms)
+  user.mouse_toggle_control_mouse()
+  mouse_click()
+	mouse_click()  
+	mouse_click()  
+^point midclick: 
+  user.mouse_toggle_control_mouse()
+  sleep(600ms)
+  user.mouse_toggle_control_mouse()
+  mouse_click(2)
+^point righty: 
+  user.mouse_toggle_control_mouse()
+  sleep(600ms)
+  user.mouse_toggle_control_mouse()
+  mouse_click(1)
 zoom mouse: user.mouse_toggle_zoom_mouse()
 camera overlay: user.mouse_toggle_camera_overlay()
 run calibration: user.mouse_calibrate()

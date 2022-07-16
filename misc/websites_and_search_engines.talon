@@ -1,0 +1,1 @@
+open clipboard: user.open_url(clip.text())

@@ -28,6 +28,7 @@ file create root: user.vscode("fileutils.newFileAtRoot")
 define show: user.vscode("editor.action.revealDefinition")
 define peek: user.vscode("editor.action.peekDefinition")
 define side: user.vscode("editor.action.revealDefinitionAside")
+define type: user.vscode("editor.action.goToTypeDefinition")
 forward: user.vscode("workbench.action.navigateForward")
 
 # personalised actions and extensions
@@ -43,6 +44,9 @@ mark prev: key(cmd-alt-,)
 # the below command will delete all bookmarks from all files
 mark delete: key(cmd-alt-\) 
 comment: key(cmd-/)
+add doc comment: 
+  insert("/**")
+  key(enter)
 project: user.vscode('workbench.action.openRecent')
 project [<user.text>]: 
   user.vscode("workbench.action.openRecent")
@@ -98,8 +102,35 @@ git blame: user.vscode("gitlens.toggleFileBlame")
 toggle wrapper: key(cmd-')
 
 pattern till new line: "(.|\\n)*"
+
 # image preview: user.vscode("svgPreview.showPreviewToSide")
 preview markdown: user.vscode("markdown.showPreview")
 name: mouse_scroll(-150)
 frog: mouse_scroll(150)
 (num|numb) <user.number_key>: key(number_key)
+discard everything: 
+  key(cmd-w)
+  sleep(50ms)
+  key(space)
+  sleep(1000ms)
+  key(cmd-shift-t)
+
+# navigating in peekDefinition 
+pick children: 
+  key("right")
+  sleep(100ms)
+  key("down")
+  key("enter")
+pick cousin: 
+  key("left:2")
+  sleep(50ms)
+  key("down right")
+  sleep(50ms)
+  key("down")
+pickup cousin: 
+  key("left:2")
+  sleep(50ms)
+  key("up right")
+  sleep(50ms)
+  key("down")
+  

@@ -13,5 +13,8 @@ go (back | backward):
 
 (refresh | reload): browser.reload()
 (refresh | reload) hard: browser.reload_hard()
-
+go to clipboard: browser.go(clip.text())
 inspect: key(cmd-shift-c)
+copy domain: 
+  browser.focus_address()
+  user.extract(edit.selected_text())

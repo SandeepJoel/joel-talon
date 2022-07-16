@@ -33,6 +33,13 @@ file save: edit.save()
 brightness up: key(brightness_up)
 brightness down: key(brightness_down)
 alfred: key(cmd-space)
+alfred select:
+  text = edit.selected_text()
+  key(cmd-space)
+  sleep(25ms)
+  insert(text)
+  edit.selected_text()
+  key(cmd-a)
 alfred [<user.text>]:
   key(cmd-space)
   sleep(25ms)
@@ -54,7 +61,7 @@ key(ctrl-alt-cmd-a): speech.enable()
 # key(ctrl-alt-cmd-m) to switch mic
 
 # below commands for vimac 
-month: key(fn-f5)
+^month time$: key(fn-f5)
 # scroll mode: key(fn-f6)
 ^hold <user.modifier_with_keys>: key(modifier_with_keys)
 
@@ -67,6 +74,11 @@ pattern bootstrap me: 'api/_/bootstrap/me'
 pattern account: 'api/_/bootstrap/account/'
 pattern current: './'
 pattern parent: '../'
+pattern link: user.insert_between("https://", "/")
+pattern link plain: user.insert_between("http://", "/")
+pattern link google: "https://www.google.com/"
+
+address localhost: "127.0.0.1"
 
 padding: 
 	insert("  ") 
@@ -77,6 +89,12 @@ tag para:
   key(left)
   key(left)
   key(left)
+tag block:
+  user.insert_between("<", "></>")
+  key(left:3)
+tag inline:
+  insert('< />')
+  key(left:3)
 tag break:
   insert('<br>')
 tag span:
@@ -96,6 +114,9 @@ tag div:
   key(left)
   key(left)
   key(left)
+
+double <user.number_key>: key(number_key number_key)
+triple <user.number_key>: key(number_key number_key number_key)
 
 unhide files: key(cmd-shift-.)
 email one: 'joeltheking00000001@gmail.com'

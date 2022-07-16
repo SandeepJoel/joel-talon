@@ -3,7 +3,6 @@ app: slack
 -
 tag(): user.messaging
 tag(): user.emoji
-
 tag(): user.find_and_replace
 
 # Workspace
@@ -66,7 +65,9 @@ toggle right sidebar: key(cmd-.)
     app.notify("please use the voice command 'element last' instead of 'last element'")
     key(shift-tab)
 
-
+(insert command | commandify): key(cmd-shift-c)
+insert link: key(cmd-shift-u)
+insert code: key(cmd-shift-alt-c)
 
 # (slack | lack) huddle: 
 #   speech.disable()

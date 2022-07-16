@@ -29,9 +29,9 @@ go to engine ex logs: "cd /usr/local/var/log/nginx\n"
 go to custom objects local: "cd /Users/sjoel/myfiles/Freshdesk/helpkit-scripts/custom-objects-local\n"
 
 sim link soft: "ln -s '~/.dotfiles/original' '~/link'"
-output copy: key(cmd-shift-a)
-command copy: key(ctrl-alt-cmd-c)
-vim mode copy: key(ctrl-alt-cmd-c)
+copy output: key(cmd-shift-a)
+copy command: key(ctrl-alt-cmd-c)
+copy vim mode : key(ctrl-alt-cmd-c)
 remove files: "rm -rf "
 remove file: "rm "
 move file: "mv "
@@ -133,6 +133,8 @@ create react app: "npx create react app"
 
 pattern stash: 
   user.insert_between("stash@{", "}")
+pattern global git ignore:
+  "code /Users/sjoel/.gitignore_global"
   
 # https://ss64.com/osx/syntax-bashkeyboard.html
 clear line:

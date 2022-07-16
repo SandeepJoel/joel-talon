@@ -31,16 +31,6 @@ break stop: key(cmd-f8)
 tab left: key(cmd-[)
 tab right: key(cmd-])
 
-
-
-link local: 'http://localhost.freshdesk-dev.com:4200/'
-link joel: 'http://joel.freshdesk-dev.com/'
-link user interface: "https://userinterface.freshdesk.com/"
-link fresh ops: "https://freshopsadmin.freshdesk.com/home"
-link calendar: 'https://calendar.google.com/calendar/u/0/r'
-link extensions: "chrome://extensions"
-link extensions shortcuts: "chrome://extensions/shortcuts"
-
 chrome dark reader: key(alt-shift-d)
 chrome fake filler: key(cmd-shift-d)
 chrome search: key(cmd-shift-a)
