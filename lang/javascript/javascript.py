@@ -8,8 +8,21 @@ tag: user.javascript
 
 mod.list('react_hooks', desc='list of all react hooks')
 ctx.lists['user.react_hooks'] = {
-    'state': 'Declare a new state variable using State Hook',
-    'use translation' : 'useTranslation'
+    'use state': 'Declare a new state variable using State Hook',
+    'use translation' : 'useTranslation',
+    'import use translation' : 'import useTranslation',
+    'import use state' : 'import useState',
+    'import react': 'Import React',
+    'import use context': 'import useContext',
+    'import use navigate': 'import useNavigate',
+    'import navigate': 'import Navigate',
+    'use navigate': 'Router useNavigate()',
+    'use context': 'useContext',
+    'class': 'Class Component',
+    'function': 'Function Syntax Component',
+    'provider': 'Context Provider',
+    'higher order': 'Higher Order Component',
+    'use effect': 'useEffect'
 }
 
 @mod.capture(rule='{user.react_hooks}')

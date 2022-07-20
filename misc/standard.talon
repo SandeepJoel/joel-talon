@@ -14,7 +14,7 @@ zoom in: edit.zoom_in()
 zoom out: edit.zoom_out()
 
 north: key(pageup)
-saudi: key(pagedown)
+(saudi|step down): key(pagedown)
 zoom reset: edit.zoom_reset()
 scroll up: edit.page_up()
 scroll down: edit.page_down()
@@ -65,15 +65,20 @@ key(ctrl-alt-cmd-a): speech.enable()
 # scroll mode: key(fn-f6)
 ^hold <user.modifier_with_keys>: key(modifier_with_keys)
 
-boolean false: "false"
-boolean true: "true"
-
-# url
+pattern false: "false"
+pattern true: "true"
+pattern root: "route"
+pattern rejects: "regex"
+pattern yet again: "yarn"
+pattern dot com: ".com"
+pattern nose jay: "knausj"
 pattern bootstrap: 'api/_/bootstrap/'
 pattern bootstrap me: 'api/_/bootstrap/me'
 pattern account: 'api/_/bootstrap/account/'
 pattern current: './'
 pattern parent: '../'
+pattern link tree: 'https://linktr.ee/sandeepjoel'
+pattern link profile: 'https://www.linkedin.com/in/sandeepjoel/'
 pattern link: user.insert_between("https://", "/")
 pattern link plain: user.insert_between("http://", "/")
 pattern link google: "https://www.google.com/"

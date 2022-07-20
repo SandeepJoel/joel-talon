@@ -27,8 +27,15 @@ go to freshdesk: "go_to_freshdesk\n"
 go to dot files: "cd /Users/sjoel/.dotfiles\n"
 go to engine ex logs: "cd /usr/local/var/log/nginx\n"
 go to custom objects local: "cd /Users/sjoel/myfiles/Freshdesk/helpkit-scripts/custom-objects-local\n"
+go to cursorless: '/Users/sjoel/.talon/user/cursorless-talon'
+go to user: 'cd ~/\n'
 
-sim link soft: "ln -s '~/.dotfiles/original' '~/link'"
+# end <- start 
+# NOTE: 
+#  1. For dotfile migration always move your files from start to end of the symlink location
+#  2. Always use the complete path while symlinking, for consistent symlink navigation inside all applications
+sim link soft: "ln -s '/Users/sjoel/.dotfiles/user/cursorless-settings' '/Users/sjoel/.talon/user/cursorless-settings'"
+sim unlink: "unlink "
 copy output: key(cmd-shift-a)
 copy command: key(ctrl-alt-cmd-c)
 copy vim mode : key(ctrl-alt-cmd-c)
@@ -135,6 +142,9 @@ pattern stash:
   user.insert_between("stash@{", "}")
 pattern global git ignore:
   "code /Users/sjoel/.gitignore_global"
+
+pattern dot files: 
+  "/Users/sjoel/.dotfiles/"
   
 # https://ss64.com/osx/syntax-bashkeyboard.html
 clear line:

@@ -11,11 +11,19 @@ settings: key(cmd-,)
 reveal: key(cmd-shift-p)
 reveal [<user.text>]:
   key(cmd-shift-p)
-  sleep(50ms)
+  sleep(100ms)
   insert(user.text or "")
-  sleep(50ms)
+  sleep(100ms)
   key(enter)
 file hunt: key(cmd-p)
+file hunt [<user.text>]: 
+  key(cmd-p)
+  sleep(50ms)
+  insert(user.text)
+file hunt (pace | paste):
+  key(cmd-p)
+  sleep(50ms)
+  edit.paste()
 youtube that: key(alt-s)
 add (curser | cursor): key(fn-f7)
 
@@ -32,6 +40,7 @@ tab left: key(cmd-[)
 tab right: key(cmd-])
 
 chrome dark reader: key(alt-shift-d)
+chrome dark reader current: key(alt-shift-a)
 chrome fake filler: key(cmd-shift-d)
 chrome search: key(cmd-shift-a)
 chrome one tab display: key(alt-shift-1)
@@ -62,6 +71,12 @@ template hello madam:
   key(space)
   key(space)
 
+template regards:
+  insert("Regards,")
+  key(enter)
+  sleep(50ms)
+  insert("A.Sandeep Joel")
+
 toggle tree: key(cmd-shift-s)
 close tabs way left: key(alt-shift-l)
 close tabs way right: key(alt-shift-r)
@@ -69,7 +84,17 @@ close other tabs: key(alt-shift-w)
 toggle tab pin: key(ctrl-cmd-p)
 toggle tab numbers: key(ctrl-space)
 
+blind search that: 
+  term = edit.selected_text()
+  user.open_url('https://www.teamblind.com/search/' + '{term}')
 
+glass door that:
+  text = edit.selected_text()
+  user.search_with_search_engine("https://www.google.com/search?q=%s", "glassdoor {text}")
+
+pattern city: "Chennai, TamilNadu, India" 
+pattern salary: "80k - 100k Euros" 
+pattern is: "Yes" 
 # Office specific
 pattern retest this please: 'retest this please'
 pattern retest coverity: "retest coverity"
