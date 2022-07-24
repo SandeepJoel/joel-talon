@@ -250,6 +250,16 @@ class Actions:
         actions.insert(text)
         return text
 
+    def get_formatters_reformat_text(formatters: str) -> str:
+        """Reformats the current selection."""
+        selected = edit.selected_text()
+        if not selected:
+            print("Asked to reformat selection, but nothing selected!")
+            return
+        unformatted = unformat_text(selected)        
+        text = actions.self.formatted_text(unformatted, formatters)        
+        return text
+
     def get_formatters_words():
         """returns a list of words currently used as formatters, and a demonstration string using those formatters"""
         formatters_help_demo = {}

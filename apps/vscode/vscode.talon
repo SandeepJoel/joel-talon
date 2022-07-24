@@ -78,7 +78,6 @@ break stop: user.vscode("workbench.action.debug.stop")
 break attach: user.vscode("extension.pwa-node-debug.attachNodeProcess")
 break restart: user.vscode("workbench.action.debug.restart")
 
-breadcrumb: user.vscode('breadcrumbs.focusAndSelect')
 toggle output: user.vscode("workbench.action.output.toggleOutput")
 toggle search details: user.vscode("workbench.action.search.toggleQueryDetails")
 replace confirm all: key(cmd-alt-enter)

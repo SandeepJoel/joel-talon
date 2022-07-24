@@ -95,6 +95,7 @@ account launch: user.insert_between("c.launch(:", ")")
 account add feature: user.insert_between("c.add_feature(:", ")")
 
 show process: "ps -ax | grep "
+show process [<user.text>]: "ps -ax | grep {text}"
 show port process: "lsof -t -i:3000"
 kill process: "kill -9 "
 kill port process: "kill -9 $(lsof -t -i:3000)"
@@ -162,3 +163,5 @@ end:
 print echo: user.insert_between("echo \"", "\"")
 
 secure shell test: "ssh -T git@github.com"
+command object activate: 'source env/bin/activate'
+command object python: 'python app.py'

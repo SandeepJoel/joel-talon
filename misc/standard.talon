@@ -13,8 +13,8 @@
 zoom in: edit.zoom_in()
 zoom out: edit.zoom_out()
 
-north: key(pageup)
-(saudi|step down): key(pagedown)
+north: user.page_up()
+step down: user.page_down()
 zoom reset: edit.zoom_reset()
 scroll up: edit.page_up()
 scroll down: edit.page_down()
@@ -65,6 +65,7 @@ key(ctrl-alt-cmd-a): speech.enable()
 # scroll mode: key(fn-f6)
 ^hold <user.modifier_with_keys>: key(modifier_with_keys)
 
+pattern is: "Yes" 
 pattern false: "false"
 pattern true: "true"
 pattern root: "route"

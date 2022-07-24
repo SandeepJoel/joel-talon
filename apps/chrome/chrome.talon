@@ -54,22 +54,13 @@ template hello sir:
   insert("Hello Sir,")
   key(enter)
   sleep(50ms)
-  key(space)
-  key(space)
-  key(space)
-  key(space)
-  key(space)
-  key(space)
+  key(space:6)
+  
 template hello madam:
   insert("Hello Madam,")
   key(enter)
   sleep(50ms)
-  key(space)
-  key(space)
-  key(space)
-  key(space)
-  key(space)
-  key(space)
+  key(space:6)
 
 template regards:
   insert("Regards,")
@@ -94,7 +85,6 @@ glass door that:
 
 pattern city: "Chennai, TamilNadu, India" 
 pattern salary: "80k - 100k Euros" 
-pattern is: "Yes" 
 # Office specific
 pattern retest this please: 'retest this please'
 pattern retest coverity: "retest coverity"
