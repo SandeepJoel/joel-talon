@@ -94,7 +94,9 @@ git remote list: "git remote -v\n"
 git remote add: "git remote add "
 git remote set url: "git remote set-url "
 git remote set url origin: 
-  user.insert_between("git remote set-url origin git@github-personal:SandeepJoel/",".git")
+  user.insert_between('git remote set-url origin git@github.com:SandeepJoel/$(basename "$PWD")','.git')
+git remote set url origin personal: 
+  user.insert_between('git remote set-url origin git@github-personal:SandeepJoel/$(basename "$PWD")','.git')
 git remote add upstream: "git remote add upstream "
 git remote remove: "git remote remove "
 git remote show origin: "git remote show origin\n"
@@ -121,7 +123,8 @@ git submodule add:  "git submodule add "
 git tag: "git tag "
 
 # Convenience
-git edit config: "git config --local -e\n"
+git config list: "git config --list"
+git config local edit: "git config --local -e\n"
 
 git clone clipboard:
   insert("git clone ")
