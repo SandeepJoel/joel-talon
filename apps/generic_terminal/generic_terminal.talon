@@ -35,7 +35,7 @@ go to user: 'cd ~/\n'
 # NOTE: 
 #  1. For dotfile migration always move your files from start to end of the symlink location
 #  2. Always use the complete path while symlinking, for consistent symlink navigation inside all applications
-sim link soft: "ln -s '/Users/sjoel/.dotfiles/user/cursorless-settings' '/Users/sjoel/.talon/user/cursorless-settings'"
+sim link soft: 'ln -s "$HOME/.dotfiles/.zshrc" "$HOME/.zshrc"'
 sim unlink: "unlink "
 copy output: key(cmd-shift-a)
 copy command: key(ctrl-alt-cmd-c)
