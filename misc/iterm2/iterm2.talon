@@ -20,3 +20,4 @@ action(user.split_window_down):
 action(user.split_window_right):
   key(cmd-d)
 expand: key(cmd-shift-enter)
+show settings: key(cmd-,)
