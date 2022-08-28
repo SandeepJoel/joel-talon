@@ -2,8 +2,8 @@ tag: user.gh
 -
 
 # you can find the configuration files in /Users/sjoel/.config/gh/hosts.yml
-hub personal: "gh personal\n"
-hub office: "gh office\n"
+hub switch personal: "gh personal\n"
+hub switch office: "gh office\n"
 hub auth login: "gh auth login\n"
 hub auth status: "gh auth status\n"
 hub auth logout: "gh auth logout "

@@ -9,6 +9,9 @@ inside angle:
 inside liquid: 
 	insert("<%%>") 
 	key(left left)
+inside pipe: 
+	insert("||") 
+	key(left)
 empty square:
   insert("[]")
 empty brace:
@@ -25,6 +28,9 @@ command that:
 italic that:
   text = edit.selected_text()
   user.paste('*{text}*')
+liquid that:
+  text = edit.selected_text()
+  user.paste('<%{text}%>')
 bold that:
   text = edit.selected_text()
   user.paste('**{text}**')

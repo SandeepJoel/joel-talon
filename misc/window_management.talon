@@ -11,3 +11,9 @@ window fullscreen: key(cmd-ctrl-f)
   user.switcher_launch("/Applications/Visual Studio Code.app")
 ^database$:
   user.switcher_launch("/Applications/Sequel Ace.app")
+^intelli jay$:
+  user.switcher_launch("/Applications/IntelliJ IDEA.app")
+^post man$:
+  user.switcher_launch("/Applications/Postman.app")
+^sublime$:
+  user.switcher_launch("/Applications/Sublime Text.app")

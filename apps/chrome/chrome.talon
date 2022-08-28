@@ -11,9 +11,9 @@ settings: key(cmd-,)
 reveal: key(cmd-shift-p)
 reveal [<user.text>]:
   key(cmd-shift-p)
-  sleep(100ms)
+  sleep(300ms)
   insert(user.text or "")
-  sleep(100ms)
+  sleep(300ms)
   key(enter)
 file hunt: key(cmd-p)
 file hunt [<user.text>]: 
@@ -93,6 +93,4 @@ pattern retest default: "retest default"
 pattern retest linters: "retest linters"
 pattern retest threads: "retest threads-addon"
 pattern retest common: "retest common-addon"
-
-pattern select tickets: "select * from helpdesk_tickets where account_id="
-pattern select tickets where: "select * from helpdesk_tickets where account_id= and helpdesk_tickets.display_id="
+pattern path authenticate custom objects: 'api/channel/v2/authenticate/custom_objects'

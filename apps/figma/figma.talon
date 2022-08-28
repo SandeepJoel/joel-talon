@@ -35,7 +35,7 @@ app: chrome
 # auto: user.figma_autolayout_add()
 # auto out: user.figma_autolayout_remove()
 
-# toggle side: user.figma_toggle_ui()
+bar switch: user.figma_toggle_ui()
 # search: user.figma_quick_actions()
 
 # move: user.figma_move()

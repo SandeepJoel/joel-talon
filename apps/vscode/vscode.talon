@@ -19,6 +19,11 @@ file hunt (pace | paste):
   user.vscode("workbench.action.quickOpen")
   sleep(25ms)
   edit.paste()
+file hunt select:
+  text = edit.selected_text()
+  user.vscode("workbench.action.quickOpen")
+  sleep(10ms)
+  insert(text)
 file delete:
   user.vscode("fileutils.removeFile")
   sleep(150ms)
@@ -54,7 +59,7 @@ project [<user.text>]:
   key(enter)
 
 google that: key(ctrl-alt-g)
-tab new: key(cmd-n)
+tab (new | nil): key(cmd-n)
 toggle tab pin: key(cmd-k shift-enter)
 # meta: key(alt-/)
 sel meta: key(alt-shift-/)
@@ -71,6 +76,8 @@ toggle scope: key(cmd-shift-\)
 quokka: "quokka"
 by bug: "byebug"
 break next: user.vscode("workbench.action.debug.stepOver")
+break toggle: user.vscode("editor.debug.action.toggleBreakpoint")
+break begin: user.vscode("workbench.action.debug.start")
 break in: user.vscode("workbench.action.debug.stepInto")
 break out: user.vscode("workbench.action.debug.stepOut")
 break big: user.vscode("workbench.action.debug.continue")
@@ -101,6 +108,7 @@ git blame: user.vscode("gitlens.toggleFileBlame")
 toggle wrapper: key(cmd-')
 
 pattern till new line: "(.|\\n)*"
+pattern ruby def: "def "
 
 # image preview: user.vscode("svgPreview.showPreviewToSide")
 preview markdown: user.vscode("markdown.showPreview")
@@ -133,3 +141,13 @@ pickup cousin:
   sleep(50ms)
   key("down")
   
+file hunt current folder: 
+  user.vscode("copyRelativeFilePath")
+  text = clip.text()
+  user.vscode("workbench.action.quickOpen")
+  sleep(50ms)
+  insert("{text}")
+  edit.delete_word()
+  edit.delete_word()
+  insert("/")
+

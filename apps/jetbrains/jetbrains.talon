@@ -52,6 +52,10 @@ hunt all <user.text> [over]:
     insert(text)
 (search | find) class: user.idea("action GotoClass")
 file hunt: user.idea("action GotoFile")
+file hunt paste: 
+  user.idea("action GotoFile")
+  sleep(100ms)
+  key(cmd-v)
 (search | find) path: user.idea("action FindInPath")
 (search | find) symbol: user.idea("action GotoSymbol")
 (search | find) symbol <user.text>$:
@@ -251,3 +255,11 @@ go camel right: user.camel_right()
 # requires plug-in: black-pycharm
 blacken: user.idea("action BLACKReformatCode")
 hunt this: key(cmd-f)
+hunt this paste: 
+  key(cmd-f)
+  sleep(100ms)
+  key(cmd-v)
+
+show settings: key(cmd-,)
+take word: key(ctrl-;)
+file copy path: key(cmd-shift-c)

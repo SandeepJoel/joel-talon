@@ -4,6 +4,7 @@ tag(): user.npm
 tag(): user.yarn
 tag(): user.git
 tag(): user.gh
+# tag(): find_and_replace
 
 kill that:
   key(ctrl-c)
@@ -60,6 +61,17 @@ go to: "go_to_\t"
 go back: "cd - \n"
 bundle: "bundle "
 bundle install: "bundle install"
+bundle ruby: "bundle exec ruby "
+bundle side kick: "bundle exec sidekiq -C config/sidekiq_client.yml \n"
+bundle shore can: "bundle exec shoryuken -R -C config/shoryuken.yml \n"
+bundle database create: "bundle exec rake db:create"
+bundle database boot strap: "bundle exec rake db:bootstrap"
+bundle ruby: "bundle exec ruby "
+bundle ruby clipboard: 
+  insert("bundle exec ruby ")
+  insert(clip.text())
+  key(right)
+  insert(" ")
 engine x: "nginx "
 sudo engine x: "sudo nginx\n"
 sudo engine x quit: "sudo nginx -s quit\n"
@@ -79,6 +91,9 @@ break next:
 break in:
   insert("s")
   key(enter)
+break list:
+  insert("list=")
+  key(enter)
 break big:
   insert("c")
   key(enter)
@@ -89,10 +104,18 @@ break trace:
   insert("tr")
   key(enter)
 
-make current: "c=Account.find(1).make_current"
-account current: "Account.current"
-account launch: user.insert_between("c.launch(:", ")")
-account add feature: user.insert_between("c.add_feature(:", ")")
+ruby account make current one: "a=Account.find(1).make_current"
+ruby account make current two: "a=Account.find(2).make_current"
+ruby account current: "Account.current"
+ruby account launch: user.insert_between("a.launch(:", ")")
+ruby account rollback: user.insert_between("a.rollback(:", ")")
+ruby account add feature: user.insert_between("a.add_feature(:", ")")
+ruby account revoke feature: user.insert_between("a.revoke_feature(:", ")")
+ruby account launch parties: "a.all_launched_features\n"
+ruby account features: "a.enabled_features_list\n"
+ruby launch new portal: "a.launch(:portal_v2, :enable_golden_ox)\n"
+
+rake translation: "rake i18n:js:export "
 
 show process: "ps -ax | grep "
 show process [<user.text>]: "ps -ax | grep {text}"
@@ -107,12 +130,20 @@ brew services start: "brew services start "
 brew services restart: "brew services restart " 
 
 memcached: "memcached"
-global start: "launchctl load /Library/LaunchAgents/com.paloaltonetworks.gp.pangp* \n"
+global begin: "launchctl load /Library/LaunchAgents/com.paloaltonetworks.gp.pangp* \n"
 global stop: "launchctl unload /Library/LaunchAgents/com.paloaltonetworks.gp.pangp* \n"
 
 open code here: "code .\n"
 open code : "code "
 hunt this: key(cmd-f)
+hunt this paste: 
+  key(cmd-f)
+  sleep(50ms)
+  insert(edit.paste())
+hunt this [<user.text>]: 
+  key(cmd-f)
+  sleep(50ms)
+  insert(user.text)
 narco: mouse_scroll(-1000)
 sarco: mouse_scroll(1000)
 bower install: "bower install"
@@ -163,5 +194,15 @@ end:
 print echo: user.insert_between("echo \"", "\"")
 
 secure shell test: "ssh -T git@github.com"
-command object activate: 'source env/bin/activate'
-command object python: 'python app.py'
+python activate: 'source env/bin/activate\n'
+python app: 'python app.py\n'
+
+deploy shadow fax backend: "bash shadowfax-backend.sh"
+deploy shadow fax backend with asset: "bash shadowfax-backend-with-asset.sh"
+deploy swat cats backend: "bash swatkats-backend.sh"
+deploy swat cats backend with asset: "bash swatkats-backend-with-asset.sh"
+
+
+tail thousand : "tail -1000 "
+tail thousand staging: "tail -1000 staging.log"
+tail thousand follow: "tail -n 1000 -f "

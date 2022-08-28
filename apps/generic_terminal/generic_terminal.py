@@ -9,7 +9,6 @@ tag: terminal
 class UserActions:
     def swallow():
         actions.key('alt-d')
-
 @ctx.action_class('menu')
 class MenuActions:
     def open_log():

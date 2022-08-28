@@ -13,6 +13,7 @@
 zoom in: edit.zoom_in()
 zoom out: edit.zoom_out()
 
+(escape | hash cap): key(esc)
 north: user.page_up()
 step down: user.page_down()
 zoom reset: edit.zoom_reset()
@@ -66,6 +67,15 @@ key(ctrl-alt-cmd-a): speech.enable()
 ^hold <user.modifier_with_keys>: key(modifier_with_keys)
 
 pattern is: "Yes" 
+pattern shadow facts: "shadowfax" 
+pattern swat cats: "swatkats" 
+pattern jay query: "jQuery" 
+pattern git message build portal assets: " [build portal assets]" 
+pattern asset sink: "asset_sync" 
+pattern warts up: "whatsapp" 
+pattern a ray: "array" 
+pattern delete: "delete" 
+pattern bullion: "boolean" 
 pattern false: "false"
 pattern true: "true"
 pattern root: "route"
@@ -73,9 +83,10 @@ pattern rejects: "regex"
 pattern yet again: "yarn"
 pattern dot com: ".com"
 pattern nose jay: "knausj"
-pattern bootstrap: 'api/_/bootstrap/'
-pattern bootstrap me: 'api/_/bootstrap/me'
-pattern account: 'api/_/bootstrap/account/'
+pattern path bootstrap: 'api/_/bootstrap/'
+pattern path bootstrap me: 'api/_/bootstrap/me'
+pattern path account: 'api/_/bootstrap/account/'
+pattern help desk tickets: 'helpdesk_tickets'
 pattern current: './'
 pattern parent: '../'
 pattern link tree: 'https://linktr.ee/sandeepjoel'
@@ -83,6 +94,9 @@ pattern link profile: 'https://www.linkedin.com/in/sandeepjoel/'
 pattern link: user.insert_between("https://", "/")
 pattern link plain: user.insert_between("http://", "/")
 pattern link google: "https://www.google.com/"
+
+pattern sequel select tickets: "select * from helpdesk_tickets where account_id="
+pattern sequel select tickets where: "select * from helpdesk_tickets where account_id= and helpdesk_tickets.display_id="
 
 address localhost: "127.0.0.1"
 
@@ -125,12 +139,16 @@ double <user.number_key>: key(number_key number_key)
 triple <user.number_key>: key(number_key number_key number_key)
 
 unhide files: key(cmd-shift-.)
-email one: 'joeltheking00000001@gmail.com'
+screen color switch: key(ctrl-alt-cmd-8)
+toggle clip board: key(ctrl-shift-i)
+
+email personal: 'joeltheking00000001@gmail.com'
 email office: 'sandeep.joel@freshworks.com'
-email three: 'sjoel@freshworks.com'
+email office Microsoft: 'sjoel@freshworks.com'
+email contact bob: 'bob.tree@freshdesk.com'
 email official: 'sandeepjoelofficial@gmail.com'
 email support: 'support@freshdesk.com'
-email temporary: 'tajotoy761@hekarro.com'
+email temporary: 'mougroibagrureu-1592@yopmail.com'
 email manager: 'maya.skumar@freshworks.com'
 full name joel: 'A Sandeep Joel'
 mobile joel: '9445484948'

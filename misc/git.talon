@@ -31,13 +31,17 @@ git clone: "git clone "
 # git clean everything: "git clean -dfx"
 git clean force: "git clean -df"
 git clean dry: "git clean -n -d"
-git commit message <user.text>: "git commit -m '{text}'"
+git commit message <user.text>: "git commit -m 'Add {text}'"
+git commit no verify <user.text>: 
+  insert("git commit -m 'Add {text}' -n")
+  key(left:4)
 git commit message:
   insert('git commit -m "Add "')
   key(left)
 git commit: "git commit\n"
 git commit amend: "git commit --amend\n"
-git commit no verify: "git commit -n\n"
+git commit amend no verify: "git commit --amend -n\n"
+# git commit no verify: "git commit -n\n"
 git commit existing: "git commit -a\n"
 git diff (colour|color) words: "git diff --color-words "
 git diff: "git diff\n"
