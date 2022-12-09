@@ -58,7 +58,7 @@ del back: key(shift-enter)
 # show status: key(ctrl-fn-f8)
 
 key(ctrl-alt-cmd-space): speech.disable()
-key(ctrl-alt-cmd-a): speech.enable()
+key(ctrl-alt-cmd-,): speech.enable()
 # key(ctrl-alt-cmd-m) to switch mic
 
 # below commands for vimac 

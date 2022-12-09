@@ -22,14 +22,6 @@ redo: key(ctrl-y)
 clean that: key(cmd-k)
 go in: "cd ./\t"
 go out: "cd ./../\n"
-go to projects: "/Users/sjoel/myfiles/Mr.J5.0/projects\n"
-go to talon: "go_to_talon\n"
-go to freshdesk: "go_to_freshdesk\n"
-go to dot files: "cd /Users/sjoel/.dotfiles\n"
-go to engine ex logs: "cd /usr/local/var/log/nginx\n"
-go to custom objects local: "cd /Users/sjoel/myfiles/Freshdesk/helpkit-scripts/custom-objects-local\n"
-go to cursorless: '/Users/sjoel/.talon/user/cursorless-talon'
-go to user: 'cd ~/\n'
 
 # end <- start 
 # NOTE: 
