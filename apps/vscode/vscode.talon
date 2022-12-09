@@ -35,6 +35,8 @@ define peek: user.vscode("editor.action.peekDefinition")
 define side: user.vscode("editor.action.revealDefinitionAside")
 define type: user.vscode("editor.action.goToTypeDefinition")
 forward: user.vscode("workbench.action.navigateForward")
+git open current: user.vscode("gitlens.openWorkingFile")
+conflict next: user.vscode("merge-conflict.next")
 
 # personalised actions and extensions
 collapse files: user.vscode("workbench.files.action.collapseExplorerFolders") 

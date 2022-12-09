@@ -80,6 +80,7 @@ redis server: "redis-server \n"
 redis shutdown: "redis-cli shutdown \n"
 rails server: "bundle exec rails s\n"
 rails console: "bundle exec rails c\n"
+rails middleware: "bundle exec rails middleware\n"
 
 # byebug
 break out:
@@ -114,8 +115,13 @@ ruby account revoke feature: user.insert_between("a.revoke_feature(:", ")")
 ruby account launch parties: "a.all_launched_features\n"
 ruby account features: "a.enabled_features_list\n"
 ruby launch new portal: "a.launch(:portal_v2, :enable_golden_ox)\n"
+ruby launch multiple ticket forms: "a.launch(:portal_v2, :enable_golden_ox, :multiple_ticket_forms_toggle, :custom_objects_portal_support)\n"
 
 rake translation: "rake i18n:js:export "
+
+rake db create test: "bundle exec rake db:create RAILS_ENV=test"
+rake db bootstrap test: "bundle exec rake db:bootstrap RAILS_ENV=test"
+rake db drop test: "bundle exec rake db:drop RAILS_ENV=test"
 
 show process: "ps -ax | grep "
 show process [<user.text>]: "ps -ax | grep {text}"
@@ -128,6 +134,7 @@ find bundle name:
 brew services list: "brew services list\n" 
 brew services start: "brew services start " 
 brew services restart: "brew services restart " 
+brew install: "brew install"
 
 memcached: "memcached"
 global begin: "launchctl load /Library/LaunchAgents/com.paloaltonetworks.gp.pangp* \n"
@@ -177,6 +184,8 @@ pattern global git ignore:
 
 pattern dot files: 
   "/Users/sjoel/.dotfiles/"
+
+pattern path helpkit: "/Users/sjoel/myfiles/Freshdesk/helpkit/"
   
 # https://ss64.com/osx/syntax-bashkeyboard.html
 clear line:
@@ -198,8 +207,12 @@ python activate: 'source env/bin/activate\n'
 python app: 'python app.py\n'
 
 deploy shadow fax backend: "bash shadowfax-backend.sh"
+deploy shadow fax frontend: "bash shadowfax-frontend.sh"
+deploy shadow fax full: "bash shadowfax-full.sh"
 deploy shadow fax backend with asset: "bash shadowfax-backend-with-asset.sh"
 deploy swat cats backend: "bash swatkats-backend.sh"
+deploy swat cats frontend: "bash swatkats-frontend.sh"
+deploy swat cats full: "bash swatkats-full.sh"
 deploy swat cats backend with asset: "bash swatkats-backend-with-asset.sh"
 
 

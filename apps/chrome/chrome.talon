@@ -79,9 +79,14 @@ blind search that:
   term = edit.selected_text()
   user.open_url('https://www.teamblind.com/search/' + '{term}')
 
+freshrelease that: 
+  term = edit.selected_text()
+  user.open_url('https://freshworks.freshrelease.com/ws/FD/tasks/' + '{term}')
+
 glass door that:
   text = edit.selected_text()
   user.search_with_search_engine("https://www.google.com/search?q=%s", "glassdoor {text}")
+
 
 pattern city: "Chennai, TamilNadu, India" 
 pattern salary: "80k - 100k Euros" 
@@ -93,4 +98,6 @@ pattern retest default: "retest default"
 pattern retest linters: "retest linters"
 pattern retest threads: "retest threads-addon"
 pattern retest common: "retest common-addon"
+pattern retest ember compatibility: "retest ember compatibility"
 pattern path authenticate custom objects: 'api/channel/v2/authenticate/custom_objects'
+pattern path custom objects schemas: 'a/custom-objects/schemas/'

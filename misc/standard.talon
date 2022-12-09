@@ -84,13 +84,18 @@ pattern yet again: "yarn"
 pattern dot com: ".com"
 pattern nose jay: "knausj"
 pattern path bootstrap: 'api/_/bootstrap/'
+pattern path ticket fields: 'api/_/ticket_fields'
 pattern path bootstrap me: 'api/_/bootstrap/me'
+pattern path tickets new: 'a/tickets/new'
 pattern path account: 'api/_/bootstrap/account/'
 pattern help desk tickets: 'helpdesk_tickets'
 pattern current: './'
 pattern parent: '../'
-pattern link tree: 'https://linktr.ee/sandeepjoel'
-pattern link profile: 'https://www.linkedin.com/in/sandeepjoel/'
+pattern grandparent: '../../'
+pattern link link tree: 'https://linktr.ee/sandeepjoel'
+pattern link linked in: 'https://www.linkedin.com/in/sandeepjoel/'
+pattern link stack overflow: 'https://stackoverflow.com/users/2933127/sandeep-joel'
+pattern link github: 'https://github.com/SandeepJoel/'
 pattern link: user.insert_between("https://", "/")
 pattern link plain: user.insert_between("http://", "/")
 pattern link google: "https://www.google.com/"
@@ -148,11 +153,15 @@ email office Microsoft: 'sjoel@freshworks.com'
 email contact bob: 'bob.tree@freshdesk.com'
 email official: 'sandeepjoelofficial@gmail.com'
 email support: 'support@freshdesk.com'
+email joel code: 'joelcode001@gmail.com'
+email office swatkats: 'sandeep.joel+001@freshworks.com'
 email temporary: 'mougroibagrureu-1592@yopmail.com'
-email manager: 'maya.skumar@freshworks.com'
+email manager: 'selvakumar.ruban@freshworks.com'
 full name joel: 'A Sandeep Joel'
 mobile joel: '9445484948'
 mobile thomas: '9841875021'
 address joel: 'No. 51, 12 street, astalakshmi nagar, alapakkam, chennai 116'
 address thomas: '19, Valluavar street, Chinna Porur, Porur - 600116'
 auto thomas: 'TN85K2476'
+
+user name joel: "SandeepJoel" 

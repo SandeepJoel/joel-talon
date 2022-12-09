@@ -18,6 +18,11 @@ git branch unset upstream: "git branch --unset-upstream"
 git remote branches: "git branch --remote\n"
 git branch <user.text>: "git branch {text}"
 git checkout: "git checkout "
+git checkout clipboard:
+  insert("git checkout ")
+  insert(clip.text())
+  key(right)
+  insert(" ")
 git checkout track: "git checkout --track origin/"
 git checkout master: "git checkout master\n"
 git checkout main: "git checkout main\n"
@@ -119,9 +124,11 @@ git (switch create | new branch) [<user.text>]:
 git switch orphan: "git switch --orphan "
 git submodule add:  "git submodule add "
 git tag: "git tag "
+git revision parse head: "git rev-parse head"
 
 # Convenience
 git edit config: "git config --local -e\n"
+git config global pull rebase false: "git config --global pull.rebase false"
 
 git clone clipboard:
   insert("git clone ")

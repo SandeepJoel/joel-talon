@@ -3,16 +3,15 @@ window large: key(cmd-alt-=)
 window fullscreen: key(cmd-ctrl-f)
 # switch <user.running_applications>: user.switcher_focus(running_applications)
 ^portal$:
-  user.switcher_focus("Google Chrome")
+  user.switcher_launch("/Applications/Google Chrome.app")
+^finder$:
+  user.switcher_launch("/System/Library/CoreServices/Finder.app")
 ^terminal$:
-  # user.switcher_focus("iTerm")
   user.switcher_launch("/Applications/iTerm.app")
 ^coder$:
   user.switcher_launch("/Applications/Visual Studio Code.app")
 ^database$:
   user.switcher_launch("/Applications/Sequel Ace.app")
-^intelli jay$:
-  user.switcher_launch("/Applications/IntelliJ IDEA.app")
 ^post man$:
   user.switcher_launch("/Applications/Postman.app")
 ^sublime$:
