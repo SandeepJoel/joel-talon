@@ -1,36 +1,9 @@
-#(jay son | jason ): "json"
-#(http | htp): "http"
-#tls: "tls"
-#M D five: "md5"
-#word (regex | rejex): "regex"
-#word queue: "queue"
-#word eye: "eye"
-#word iter: "iter"
-#word no: "NULL"
-#word cmd: "cmd"
-#word dup: "dup"
-#word shell: "shell".
-zoom in: edit.zoom_in()
-zoom out: edit.zoom_out()
-
 (escape | hash cap): key(esc)
 north: user.page_up()
 step down: user.page_down()
-zoom reset: edit.zoom_reset()
-scroll up: edit.page_up()
-scroll down: edit.page_down()
-
-copy that: edit.copy()
-cut that: edit.cut()
-(pace | paste) that: edit.paste()
-(pace | paste) (del|enter):
-  edit.paste()
-  key(enter)
 slap: edit.undo()
 yes indeed: edit.redo()
 paste match: edit.paste_match_style()
-file save: edit.save()
-
 brightness up: key(brightness_up)
 brightness down: key(brightness_down)
 alfred: key(cmd-space)
@@ -105,15 +78,9 @@ pattern sequel select tickets where: "select * from helpdesk_tickets where accou
 
 address localhost: "127.0.0.1"
 
-padding: 
-	insert("  ") 
-	key(left)
 tag para:
   insert('<p></p>')
-  key(left)
-  key(left)
-  key(left)
-  key(left)
+  key(left:4)
 tag block:
   user.insert_between("<", "></>")
   key(left:3)
@@ -124,21 +91,10 @@ tag break:
   insert('<br>')
 tag span:
   insert('<span></span>')
-  key(left)
-  key(left)
-  key(left)
-  key(left)
-  key(left)
-  key(left)
-  key(left)
+  key(left:7)
 tag div:
   insert('<div></div>')
-  key(left)
-  key(left)
-  key(left)
-  key(left)
-  key(left)
-  key(left)
+  key(left:6)
 
 double <user.number_key>: key(number_key number_key)
 triple <user.number_key>: key(number_key number_key number_key)
