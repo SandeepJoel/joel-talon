@@ -32,8 +32,8 @@
     user.mouse_toggle_control_mouse()
     mouse_click(1)
 
-name: mouse_scroll(-500)
-frog: mouse_scroll(500)
+# name: mouse_scroll(-500)
+# frog: mouse_scroll(500)
 move left: mouse_scroll(0, -250)
 move right: mouse_scroll(0, 250)
 bigger left: mouse_scroll(0, -1000)

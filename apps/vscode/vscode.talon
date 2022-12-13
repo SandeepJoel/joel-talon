@@ -114,8 +114,8 @@ pattern ruby def: "def "
 
 # image preview: user.vscode("svgPreview.showPreviewToSide")
 preview markdown: user.vscode("markdown.showPreview")
-name: mouse_scroll(-150)
-frog: mouse_scroll(150)
+# name: mouse_scroll(-150)
+# frog: mouse_scroll(150)
 (num|numb) <user.number_key>: key(number_key)
 discard everything: 
   key(cmd-w)

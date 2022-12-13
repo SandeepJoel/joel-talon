@@ -2,6 +2,19 @@ os: mac
 app: chrome
 -
 
+settings():
+  user.mouse_continuous_scroll_amount = 300
+
+face(pucker_lips_right): 
+  user.mouse_scroll_down_continuous()
+face(pucker_lips_right:stop): 
+  user.mouse_scroll_stop()
+
+face(pucker_lips_left): 
+  user.mouse_scroll_up_continuous()
+face(pucker_lips_left:stop): 
+  user.mouse_scroll_stop()
+
 # Need to debug why the below commands were not working by default
 zoom in: key(cmd-=)
 zoom out: key(cmd--)
