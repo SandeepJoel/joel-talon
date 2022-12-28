@@ -5,6 +5,8 @@ tag(): user.messaging
 tag(): user.emoji
 tag(): user.find_and_replace
 
+settings():
+  user.mouse_continuous_scroll_amount = 300
 # Workspace
 workspace <number>: key("cmd-{number}")
 # Channel

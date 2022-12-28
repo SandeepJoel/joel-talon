@@ -3,7 +3,7 @@ app: chrome
 -
 
 settings():
-  user.mouse_continuous_scroll_amount = 300
+  user.mouse_continuous_scroll_amount = 400
 
 face(pucker_lips_right): 
   user.mouse_scroll_down_continuous()

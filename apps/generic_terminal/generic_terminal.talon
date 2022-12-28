@@ -117,9 +117,9 @@ rake db drop test: "bundle exec rake db:drop RAILS_ENV=test"
 
 show process: "ps -ax | grep "
 show process [<user.text>]: "ps -ax | grep {text}"
-show port process: "lsof -t -i:3000"
+show process in port: "lsof -t -i:3000"
 kill process: "kill -9 "
-kill port process: "kill -9 $(lsof -t -i:3000)"
+kill process in port: "kill -9 $(lsof -t -i:3000)"
 find bundle name: 
   user.insert_between("osascript -e 'id of app \"", "\"'")
 
@@ -210,4 +210,4 @@ deploy swat cats backend with asset: "bash swatkats-backend-with-asset.sh"
 
 tail thousand : "tail -1000 "
 tail thousand staging: "tail -1000 staging.log"
-tail thousand follow: "tail -n 1000 -f "
+tail thousand follow staging: "tail -n 1000 -f staging.log"

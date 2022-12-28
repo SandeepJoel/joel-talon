@@ -40,6 +40,7 @@ key(ctrl-alt-cmd-,): speech.enable()
 ^hold <user.modifier_with_keys>: key(modifier_with_keys)
 
 pattern is: "Yes" 
+pattern helpdesk: "helpdesk" 
 pattern shadow facts: "shadowfax" 
 pattern swat cats: "swatkats" 
 pattern jay query: "jQuery" 
@@ -120,4 +121,6 @@ address joel: 'No. 51, 12 street, astalakshmi nagar, alapakkam, chennai 116'
 address thomas: '19, Valluavar street, Chinna Porur, Porur - 600116'
 auto thomas: 'TN85K2476'
 
-user name joel: "SandeepJoel" 
+user name joel: "SandeepJoel"
+
+ember get: user.insert_between("Ember.get(this,'", "')")

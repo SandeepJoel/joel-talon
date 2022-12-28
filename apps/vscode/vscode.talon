@@ -35,7 +35,7 @@ define peek: user.vscode("editor.action.peekDefinition")
 define side: user.vscode("editor.action.revealDefinitionAside")
 define type: user.vscode("editor.action.goToTypeDefinition")
 forward: user.vscode("workbench.action.navigateForward")
-git open current: user.vscode("gitlens.openWorkingFile")
+git current file: user.vscode("gitlens.openWorkingFile")
 conflict next: user.vscode("merge-conflict.next")
 
 # personalised actions and extensions
@@ -51,7 +51,7 @@ mark prev: key(cmd-alt-,)
 # the below command will delete all bookmarks from all files
 mark delete: key(cmd-alt-\) 
 comment: key(cmd-/)
-add doc comment: 
+insert doc comment: 
   insert("/**")
   key(enter)
 project: user.vscode('workbench.action.openRecent')
