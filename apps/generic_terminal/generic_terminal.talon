@@ -25,6 +25,11 @@ go out: "cd ./../\n"
 go last command: key(cmd-shift-up)
 go next command: key(cmd-shift-down)
 
+vim exit: 
+  key(esc)
+  insert(':q')
+  key(enter)
+
 face(pucker_lips_left): 
   key(shift-pageup)
 
@@ -60,7 +65,7 @@ node ex: "npx "
 location: "pwd\n"
 sudo: "sudo "
 alias: "alias "
-go to: "go_to_\t"
+# go to: "go_to_\t"
 go back: "cd - \n"
 bundle: "bundle "
 bundle install: "bundle install"
