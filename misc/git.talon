@@ -6,6 +6,7 @@ git: "git "
 git add space: "git add "
 git add patch: "git add . -p\n"
 git add everything: "git add --all\n"
+git apply: "git apply "
 git add interactive: "git add -i\n"
 git add <user.text>: "git add {text}"
 git bisect: "git bisect "
@@ -46,10 +47,12 @@ git commit message:
 git commit: "git commit\n"
 git commit amend: "git commit --amend\n"
 git commit amend no verify: "git commit --amend -n\n"
-# git commit no verify: "git commit -n\n"
 git commit existing: "git commit -a\n"
 git diff (colour|color) words: "git diff --color-words "
 git diff: "git diff\n"
+git diff save to file: 
+  insert("git diff > my_custom_patch_file.patch")
+  key(left:6)
 git diff no pager: " GIT_PAGER='' git diff "
 git diff cached: "git diff --cached\n"
 git diff tool: "git difftool -d\n"
@@ -125,6 +128,7 @@ git (switch create | new branch) [<user.text>]:
   "git switch -c {user.formatted_text(text or '', 'DASH_SEPARATED')}"
 git switch orphan: "git switch --orphan "
 git submodule add:  "git submodule add "
+git submodule update init: "git submodule update --init"
 git tag: "git tag "
 git revision parse head: "git rev-parse head"
 

@@ -13,6 +13,10 @@ class Actions:
     """Extract domain values from passed string """
     m = re.match(r"https?:\/\/(.+?\/)", text)
     actions.clip.set_text(m.group(1))
+  def extractPath(text: str):
+    """Extract url path values from passed string """
+    m = re.match(r"https?:\/\/(.+?\/)(.*)", text)
+    actions.clip.set_text(m.group(2))
 
 @ctx.action_class("user")
 class UserActions:

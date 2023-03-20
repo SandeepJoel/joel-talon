@@ -96,6 +96,10 @@ freshrelease that:
   term = edit.selected_text()
   user.open_url('https://freshworks.freshrelease.com/ws/FD/tasks/' + '{term}')
 
+fresh ops admin that: 
+  term = edit.selected_text()
+  user.open_url('https://freshopsadmin.freshdesk.com/accounts/' + '{term}')
+
 glass door that:
   text = edit.selected_text()
   user.search_with_search_engine("https://www.google.com/search?q=%s", "glassdoor {text}")

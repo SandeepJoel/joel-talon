@@ -18,3 +18,6 @@ inspect: key(cmd-shift-c)
 copy domain: 
   browser.focus_address()
   user.extract(edit.selected_text())
+copy end path: 
+  browser.focus_address()
+  user.extractPath(edit.selected_text())

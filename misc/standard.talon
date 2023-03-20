@@ -107,6 +107,7 @@ toggle clip board: key(ctrl-shift-i)
 email personal: 'joeltheking00000001@gmail.com'
 email office: 'sandeep.joel@freshworks.com'
 email office Microsoft: 'sjoel@freshworks.com'
+email mountains disappear: 'sandeep.joel+0031@freshworks.com'
 email contact bob: 'bob.tree@freshdesk.com'
 email official: 'sandeepjoelofficial@gmail.com'
 email support: 'support@freshdesk.com'

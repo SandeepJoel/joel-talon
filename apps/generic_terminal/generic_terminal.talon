@@ -22,6 +22,14 @@ redo: key(ctrl-y)
 clean that: key(cmd-k)
 go in: "cd ./\t"
 go out: "cd ./../\n"
+go last command: key(cmd-shift-up)
+go next command: key(cmd-shift-down)
+
+face(pucker_lips_left): 
+  key(shift-pageup)
+
+face(pucker_lips_right): 
+  key(shift-pagedown)
 
 # end <- start 
 # NOTE: 
@@ -39,6 +47,9 @@ move file: "mv "
 node version list: "nvm list\n"
 node version install: "nvm install\n"
 node version use: "nvm use "
+
+freshkit run: "fdk run "
+freshkit validate: "fdk validate "
 
 list all: "ls -all\n"
 folder new: "mkdir "
@@ -208,6 +219,4 @@ deploy swat cats full: "bash swatkats-full.sh"
 deploy swat cats backend with asset: "bash swatkats-backend-with-asset.sh"
 
 
-tail thousand : "tail -1000 "
-tail thousand staging: "tail -1000 staging.log"
-tail thousand follow staging: "tail -n 1000 -f staging.log"
+tail follow staging log: "tail -f log/staging.log"
