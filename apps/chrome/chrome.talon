@@ -61,7 +61,7 @@ chrome one tab current: key(alt-shift-2)
 chrome full page: key(alt-shift-p)
 chrome translate: key(alt-shift-t)
 
-query dev: "?dev=true"
+query param dev: "?dev=true"
 
 template hello sir:
   insert("Hello Sir,")
