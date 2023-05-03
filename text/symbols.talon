@@ -6,6 +6,9 @@ double arrow: " => "
 inside angle: 
 	insert("<>") 
 	key(left)
+inside literal: 
+	insert("``") 
+	key(left)
 inside liquid: 
 	insert("<%%>") 
 	key(left left)

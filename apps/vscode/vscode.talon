@@ -40,7 +40,7 @@ conflict next: user.vscode("merge-conflict.next")
 
 # personalised actions and extensions
 collapse files: user.vscode("workbench.files.action.collapseExplorerFolders") 
-clear output: key(cmd-alt-u)
+code clear: key(cmd-alt-u)
 salt that: key(fn-f4)
 salt back: key(shift-fn-f4)
 
@@ -152,4 +152,3 @@ file hunt current folder:
   edit.delete_word()
   edit.delete_word()
   insert("/")
-

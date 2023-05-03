@@ -19,7 +19,7 @@ ctx.lists['user.react_hooks'] = {
     'use navigate': 'Router useNavigate()',
     'use context': 'useContext',
     'class': 'Class Component',
-    'function': 'Function Syntax Component',
+    'funk': 'Function Syntax Component',
     'provider': 'Context Provider',
     'higher order': 'Higher Order Component',
     'use effect': 'useEffect'

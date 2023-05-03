@@ -20,6 +20,7 @@ alfred [<user.text>]:
   insert(user.text or "")
   key(enter)
 
+clip history: key(ctrl-alt-cmd-c) 
 fly fast: key(escape escape)
 wipe: key(backspace)
 pull: key(fn-del)
@@ -125,3 +126,4 @@ auto thomas: 'TN85K2476'
 user name joel: "SandeepJoel"
 
 ember get: user.insert_between("Ember.get(this,'", "')")
+insert date: user.insert_between("new Date(", ")")
