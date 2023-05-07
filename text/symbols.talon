@@ -15,7 +15,7 @@ inside liquid:
 inside pipe: 
 	insert("||") 
 	key(left)
-empty square:
+empty (a ray| list):
   insert("[]")
 empty brace:
   insert("{}")

@@ -3,6 +3,9 @@ app: Sequel Ace
 -
 # https://sequel-ace.com/shortcuts.html
 
+settings():
+  user.mouse_continuous_scroll_amount = 600
+
 tab new: key(cmd-t)
 tab quit: key(cmd-w)
 tab (clone|duplicate): key(cmd-shift-t)
