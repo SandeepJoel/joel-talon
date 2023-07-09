@@ -12,7 +12,7 @@ class UserActions:
 @ctx.action_class('menu')
 class MenuActions:
     def open_log():
-        actions.insert('~/.talon/.venv/bin/tail_log ; exit;')
+        actions.insert('tail -f ~/.talon/talon.log')
         actions.key('enter')
 
     def open_repl():

@@ -21,3 +21,6 @@ copy domain:
 copy end path: 
   browser.focus_address()
   user.extractPath(edit.selected_text())
+google here <user.text>:
+  browser.focus_address()
+  insert(user.text)
