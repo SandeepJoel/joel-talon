@@ -15,9 +15,5 @@ arrangement current:
   key(alt-shift-r)
 arrangement save: 
   key(cmd-shift-s)
-action(user.split_window_down):
-  key(cmd-shift-d)
-action(user.split_window_right):
-  key(cmd-d)
 expand: key(cmd-shift-enter)
 show settings: key(cmd-,)
