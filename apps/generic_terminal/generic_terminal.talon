@@ -57,6 +57,7 @@ freshkit run: "fdk run "
 freshkit validate: "fdk validate "
 
 list all: "ls -all\n"
+list file size: "du -sh *\n"
 folder new: "mkdir "
 folder delete: "rmdir "
 
@@ -135,6 +136,7 @@ show process: "ps -ax | grep "
 show process [<user.text>]: "ps -ax | grep {text}"
 show process in port: "lsof -t -i:3000"
 kill process: "kill -9 "
+kill process  [<user.text>]: "kill -9 {text}"
 kill process in port: "kill -9 $(lsof -t -i:3000)"
 find bundle name: 
   user.insert_between("osascript -e 'id of app \"", "\"'")
@@ -211,7 +213,7 @@ end:
 print echo: user.insert_between("echo \"", "\"")
 
 secure shell test: "ssh -T git@github.com"
-python activate: 'source env/bin/activate\n'
+source activate: 'source env/bin/activate\n'
 python app: 'python app.py\n'
 
 deploy shadow fax backend: "bash shadowfax-backend.sh"

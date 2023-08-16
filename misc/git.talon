@@ -29,6 +29,9 @@ git checkout master: "git checkout master\n"
 git checkout main: "git checkout main\n"
 git checkout <user.text>: "git checkout {text}"
 git cherry pick: "git cherry-pick "
+git cherry pick range: 
+  insert("git cherry-pick 'A^...B'")
+  key(left:6)
 git cherry pick continue: "git cherry-pick --continue "
 git cherry pick abort: "git cherry-pick --abort "
 git cherry pick skip: "git cherry-pick --skip "

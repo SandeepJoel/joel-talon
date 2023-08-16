@@ -37,6 +37,12 @@ define type: user.vscode("editor.action.goToTypeDefinition")
 forward: user.vscode("workbench.action.navigateForward")
 git current file: user.vscode("gitlens.openWorkingFile")
 conflict next: user.vscode("merge-conflict.next")
+conflict accept current: user.vscode("merge-conflict.accept.current")
+conflict accept incoming: user.vscode("merge-conflict.accept.incoming")
+conflict accept both: user.vscode("merge-conflict.accept.both")
+conflict accept all current: user.vscode("merge-conflict.accept.all-current")
+conflict accept all incoming: user.vscode("merge-conflict.accept.all-incoming")
+conflict accept all both: user.vscode("merge-conflict.accept.all-both")
 
 # personalised actions and extensions
 collapse files: user.vscode("workbench.files.action.collapseExplorerFolders") 
@@ -107,6 +113,7 @@ emmet wrap this: user.vscode("editor.emmet.action.wrapWithAbbreviation")
 
 command setup worker: "message = JSON.parse(JSON.stringify(message));"
 git blame: user.vscode("gitlens.toggleFileBlame")
+git discord: user.vscode("git.cleanAll")
 toggle wrapper: key(cmd-')
 
 pattern till new line: "(.|\\n)*"
@@ -152,3 +159,6 @@ file hunt current folder:
   edit.delete_word()
   edit.delete_word()
   insert("/")
+
+
+git stash apply: user.vscode("git.stashApply")

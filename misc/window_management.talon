@@ -1,4 +1,5 @@
 window quit: key(cmd-q)
+window many mice: key(cmd-m)
 window large: key(cmd-alt-=)
 window fullscreen: key(cmd-ctrl-f)
 # switch <user.running_applications>: user.switcher_focus(running_applications)

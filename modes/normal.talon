@@ -1,7 +1,7 @@
 mode: all
 -
 
-drowse [<phrase>]$: 
+drowsing [<phrase>]$: 
   user.mouse_sleep()
   speech.disable()
-drowse <phrase> resume$: skip()
+# drowse <phrase> resume$: skip()

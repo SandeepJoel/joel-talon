@@ -63,58 +63,9 @@ chrome translate: key(alt-shift-t)
 
 query param dev: "?dev=true"
 
-template hello sir:
-  insert("Hello Sir,")
-  key(enter)
-  sleep(50ms)
-  key(space:6)
-  
-template hello madam:
-  insert("Hello Madam,")
-  key(enter)
-  sleep(50ms)
-  key(space:6)
-
-template regards:
-  insert("Regards,")
-  key(enter)
-  sleep(50ms)
-  insert("A.Sandeep Joel")
-
 toggle tree: key(cmd-shift-s)
 close tabs way left: key(alt-shift-l)
 close tabs way right: key(alt-shift-r)
 close other tabs: key(alt-shift-w)
 toggle tab pin: key(ctrl-cmd-p)
 toggle tab numbers: key(ctrl-space)
-
-blind search that: 
-  term = edit.selected_text()
-  user.open_url('https://www.teamblind.com/search/' + '{term}')
-
-freshrelease that: 
-  term = edit.selected_text()
-  user.open_url('https://freshworks.freshrelease.com/ws/FD/tasks/' + '{term}')
-
-fresh ops admin that: 
-  term = edit.selected_text()
-  user.open_url('https://freshopsadmin.freshdesk.com/accounts/' + '{term}')
-
-glass door that:
-  text = edit.selected_text()
-  user.search_with_search_engine("https://www.google.com/search?q=%s", "glassdoor {text}")
-
-
-pattern city: "Chennai, TamilNadu, India" 
-pattern salary: "80k - 100k Euros" 
-# Office specific
-pattern retest this please: 'retest this please'
-pattern retest coverity: "retest coverity"
-pattern retest bundle: "retest bundle size"
-pattern retest default: "retest default"
-pattern retest linters: "retest linters"
-pattern retest threads: "retest threads-addon"
-pattern retest common: "retest common-addon"
-pattern retest ember compatibility: "retest ember compatibility"
-pattern path authenticate custom objects: 'api/channel/v2/authenticate/custom_objects'
-pattern path custom objects schemas: 'a/custom-objects/schemas/'
