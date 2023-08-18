@@ -48,6 +48,7 @@ key(ctrl-alt-cmd-,): speech.enable()
 ^hold <user.modifier_with_keys>: key(modifier_with_keys)
 
 pattern is: "Yes" 
+pattern add: "Add " 
 pattern helpdesk: "helpdesk" 
 pattern at freshworks dot com: "@freshworks.com" 
 pattern at gmail dot com: "@gmail.com" 
