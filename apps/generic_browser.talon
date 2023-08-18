@@ -129,7 +129,6 @@ template why me:
   - I consider myself as life long learner.
   """)
 
-# travis toggle: key(cmd-j)
 template prompt cover letter:
   insert("""
   Below is the job description for Senior Front End Developer role in a company

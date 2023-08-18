@@ -53,7 +53,8 @@ node version list: "nvm list\n"
 node version install: "nvm install\n"
 node version use: "nvm use "
 
-freshkit run: "fdk run "
+freshkit run: "fdk run \n"
+freshkit version: "fdk -v \n"
 freshkit validate: "fdk validate "
 
 list all: "ls -all\n"
