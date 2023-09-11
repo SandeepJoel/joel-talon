@@ -46,7 +46,6 @@ bold: key(cmd-b)
 (slack | lack) invite: key(a)
 # Miscellaneous
 (slack | lack) shortcuts: key(cmd-/)
-emote <user.text>: "{text}"
 toggle left sidebar: key(cmd-shift-d)
 toggle right sidebar: key(cmd-.)
 
@@ -67,7 +66,12 @@ toggle right sidebar: key(cmd-.)
     app.notify("please use the voice command 'element last' instead of 'last element'")
     key(shift-tab)
 
-(insert command | commandify): key(cmd-shift-c)
+insert command: key(cmd-shift-c)
+insert command clipboard: 
+  key(cmd-shift-c)
+  edit.paste()
+  sleep(50ms)
+  key(right:2)
 insert link: key(cmd-shift-u)
 insert code: key(cmd-shift-alt-c)
 

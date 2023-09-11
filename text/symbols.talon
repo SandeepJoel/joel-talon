@@ -15,6 +15,9 @@ inside liquid:
 inside pipe: 
 	insert("||") 
 	key(left)
+inside regex: 
+	insert("//") 
+	key(left)
 empty (a ray| list):
   insert("[]")
 empty brace:

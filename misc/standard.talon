@@ -26,6 +26,7 @@ alfred [<user.text>]:
   insert(user.text or "")
   key(enter)
 
+# maccy
 clip history: key(ctrl-alt-cmd-c) 
 fly fast: key(escape escape)
 wipe: key(backspace)
@@ -136,6 +137,10 @@ email office swatkats: 'sandeep.joel+001@freshworks.com'
 email temporary: 'mougroibagrureu-1592@yopmail.com'
 email manager: 'basheer.ahamed@freshworks.com'
 full name joel: 'A Sandeep Joel'
+full name raja segar: 'Rajasegar chandiran'
+full name al thaaf: 'Ahamed Althaf'
+full name ram: 'Ramachandran Nagaraj'
+full name karthik: 'Karthik Baskaran'
 full name arafath: 'Arafathi'
 full name christina: 'Christina D'
 full name anand: 'Anand Edward'

@@ -1,4 +1,5 @@
 app: vscode
+# win.title: ${activeEditorShort}${separator}${rootName}${separator}${profileName}${separator}focus:[${focusedView}]
 -
 tag(): user.emoji
 # tag(): user.npm

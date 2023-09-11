@@ -89,7 +89,7 @@ play recording <user.text> [over]:
     Key("enter")
 # Marks
 go mark: user.idea("action ShowBookmarks")
-mark that: user.idea("action ToggleBookmark")
+mark this: user.idea("action ToggleBookmark")
 mark next : user.idea("action GotoNextBookmark")
 mark prev: user.idea("action GotoPreviousBookmark")
 toggle mark <number>: user.idea("action ToggleBookmark{number}")

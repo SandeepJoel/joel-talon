@@ -71,6 +71,7 @@ alias: "alias "
 go back: "cd - \n"
 bundle: "bundle "
 bundle install: "bundle install"
+bundle install and rail server: "bundle install && bundle exec rails s\n"
 bundle ruby: "bundle exec ruby "
 bundle side kick: "bundle exec sidekiq -C config/sidekiq_client.yml \n"
 bundle shore can: "bundle exec shoryuken -R -C config/shoryuken.yml \n"
@@ -216,6 +217,10 @@ print echo: user.insert_between("echo \"", "\"")
 secure shell test: "ssh -T git@github.com"
 source activate: 'source env/bin/activate\n'
 python app: 'python app.py\n'
+
+deploy mavericks backend: "bash mavericks-backend.sh"
+deploy mavericks frontend: "bash mavericks-frontend.sh"
+deploy mavericks backend with asset: "bash mavericks-backend-with-asset.sh"
 
 deploy shadow fax backend: "bash shadowfax-backend.sh"
 deploy shadow fax frontend: "bash shadowfax-frontend.sh"

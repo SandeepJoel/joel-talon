@@ -49,8 +49,8 @@ break in: key(cmd-;)
 break out: key(cmd-shift-;)
 break big: key(cmd-\)
 break stop: key(cmd-f8)
-tab left: key(cmd-[)
-tab right: key(cmd-])
+# tab left: key(cmd-[)
+# tab right: key(cmd-])
 
 chrome dark reader: key(alt-shift-d)
 chrome dark reader current: key(alt-shift-a)
@@ -60,6 +60,9 @@ chrome one tab display: key(alt-shift-1)
 chrome one tab current: key(alt-shift-2)
 chrome full page: key(alt-shift-p)
 chrome translate: key(alt-shift-t)
+
+mark next: key(f2)
+mark this: key(ctrl-f2)
 
 query param dev: "?dev=true"
 

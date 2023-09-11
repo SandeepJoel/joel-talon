@@ -11,8 +11,8 @@ arrangement backend:
   key(alt-shift-b)
 arrangement talon: 
   key(alt-shift-t)
-arrangement current: 
-  key(alt-shift-r)
+arrangement deployment: 
+  key(alt-shift-d)
 arrangement save: 
   key(cmd-shift-s)
 expand: key(cmd-shift-enter)

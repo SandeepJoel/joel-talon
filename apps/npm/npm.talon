@@ -25,3 +25,8 @@ node package config set prefix:
     edit.left()
 
 node package version: "npm --version\n"
+
+
+pure node dev: "pnpm dev\n"
+pure node build: "pnpm build\n"
+pure node prod: "pnpm prod\n"
