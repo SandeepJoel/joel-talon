@@ -1,5 +1,4 @@
 app: vscode
-# win.title: ${activeEditorShort}${separator}${rootName}${separator}${profileName}${separator}focus:[${focusedView}]
 -
 tag(): user.emoji
 # tag(): user.npm
@@ -29,8 +28,6 @@ file delete:
   user.vscode("fileutils.removeFile")
   sleep(150ms)
 file copy name: user.vscode("fileutils.copyFileName")
-file create relative: user.vscode("fileutils.newFile")
-file create root: user.vscode("fileutils.newFileAtRoot")
 define show: user.vscode("editor.action.revealDefinition")
 define peek: user.vscode("editor.action.peekDefinition")
 define side: user.vscode("editor.action.revealDefinitionAside")
@@ -163,3 +160,18 @@ file hunt current folder:
 
 
 git stash apply: user.vscode("git.stashApply")
+switch term: user.vscode("workbench.action.terminal.focus")
+switch code: user.vscode("workbench.action.focusActiveEditorGroup")
+
+
+termi external: user.vscode("workbench.action.terminal.openNativeConsole")
+termi new: user.vscode("workbench.action.terminal.new")
+termi next: user.vscode("workbench.action.terminal.focusNext")
+termi last: user.vscode("workbench.action.terminal.focusPrevious")
+termi split: user.vscode("workbench.action.terminal.split")
+termi zoom: user.vscode("workbench.action.toggleMaximizedPanel")
+termi delete: user.vscode("workbench.action.terminal.kill")
+termi toggle: user.vscode_and_wait("workbench.action.terminal.toggleTerminal")
+termi scroll up: user.vscode("workbench.action.terminal.scrollUp")
+termi scroll down: user.vscode("workbench.action.terminal.scrollDown")
+termi <number_small>: user.vscode_terminal(number_small)

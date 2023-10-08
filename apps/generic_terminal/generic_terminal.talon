@@ -52,6 +52,7 @@ move file: "mv "
 node version list: "nvm list\n"
 node version install: "nvm install\n"
 node version use: "nvm use "
+node version alias: "nvm alias default "
 
 freshkit run: "fdk run \n"
 freshkit version: "fdk -v \n"
