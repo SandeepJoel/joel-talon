@@ -27,7 +27,7 @@ alfred [<user.text>]:
   key(enter)
 
 # maccy
-clip history: key(ctrl-alt-cmd-c) 
+clip history: key(cmd-shift-m) 
 fly fast: key(escape escape)
 wipe: key(backspace)
 pull: key(fn-del)
@@ -39,8 +39,8 @@ end ten: key(enter)
 # show menu: key(ctrl-fn-f2)
 # show status: key(ctrl-fn-f8)
 
-key(ctrl-alt-cmd-space): speech.disable()
-key(ctrl-alt-cmd-,): speech.enable()
+key(cmd-shift-space): speech.disable()
+key(cmd-shift-,): speech.enable()
 # key(ctrl-alt-cmd-m) to switch mic
 
 # below commands for vimac 
@@ -122,8 +122,7 @@ triple <user.number_key>: key(number_key number_key number_key)
 triple double quotes: user.insert_between('"""', '"""')
 
 unhide files: key(cmd-shift-.)
-screen color switch: key(ctrl-alt-cmd-8)
-toggle clip board: key(ctrl-alt-cmd-c)
+# screen color switch: key(ctrl-alt-cmd-8)
 
 email personal: 'joeltheking00000001@gmail.com'
 email office: 'sandeep.joel@freshworks.com'
