@@ -2,7 +2,9 @@ window quit: key(cmd-q)
 window (many|mini) mice: key(cmd-m)
 window large: key(cmd-alt-=)
 window fullscreen: key(cmd-ctrl-f)
-# switch <user.running_applications>: user.switcher_focus(running_applications)
+move point to <user.running_applications>: 
+  user.switcher_focus(running_applications)
+  user.mouse_move_center_active_window()
 ^portal$:
   user.switcher_launch("/Applications/Google Chrome.app")
 ^finder$:

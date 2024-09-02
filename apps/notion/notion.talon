@@ -2,6 +2,10 @@ app: notion
 -
 tag(): user.find_and_replace
 tag(): user.emoji
+tag(): user.tabs
+
+settings():
+  user.mouse_continuous_scroll_amount = 300
 
 file hunt [<user.text>]:
   key(cmd-p)

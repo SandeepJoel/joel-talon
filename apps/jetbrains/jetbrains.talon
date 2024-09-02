@@ -7,6 +7,9 @@ tag(): user.splits
 tag(): user.tabs
 # multiple_cursors.py support end
 
+settings():
+  user.mouse_continuous_scroll_amount = 300
+  
 # Auto complete
 complete: user.idea("action CodeCompletion")
 perfect: user.idea("action CodeCompletion,action CodeCompletion")

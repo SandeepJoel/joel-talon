@@ -100,22 +100,19 @@ pattern date: user.insert_between("new Date(", ")")
 address localhost: "127.0.0.1"
 
 pattern tag para:
-  insert('<p></p>')
-  key(left:4)
+  user.insert_between("<p>", "</p>")
 pattern tag block:
   user.insert_between("<", "></>")
-  key(left:3)
 pattern tag inline:
-  insert('< />')
-  key(left:3)
+  user.insert_between("<", " />")
 pattern tag break:
   insert('<br>')
 pattern tag span:
-  insert('<span></span>')
-  key(left:7)
+  user.insert_between("<span>", "</span>")
 pattern tag div:
-  insert('<div></div>')
-  key(left:6)
+  user.insert_between("<div>", "</div>")
+pattern tag Fragment:
+  user.insert_between("<Fragment>", "</Fragment>")
 
 double <user.number_key>: key(number_key number_key)
 triple <user.number_key>: key(number_key number_key number_key)
@@ -125,26 +122,25 @@ unhide files: key(cmd-shift-.)
 # screen color switch: key(ctrl-alt-cmd-8)
 
 email personal: 'joeltheking00000001@gmail.com'
-email office: 'sandeep.joel@freshworks.com'
-email office Microsoft: 'sjoel@freshworks.com'
-email joel is here: 'sandeep.joel+100@freshworks.com'
-email contact bob: 'bob.tree@freshdesk.com'
+email gartner: 'asandeep.joel@gartner.com'
+email client chris: 'chris.humphres@redcross.org'
 email official: 'sandeepjoelofficial@gmail.com'
-email support: 'support@freshdesk.com'
 email joel code: 'joelcode001@gmail.com'
 email office swatkats: 'sandeep.joel+001@freshworks.com'
 email temporary: 'mougroibagrureu-1592@yopmail.com'
-email manager: 'basheer.ahamed@freshworks.com'
+email manager: 'vijayaprasad.sundarasamy@gartner.com'
 full name joel: 'A Sandeep Joel'
-full name raja segar: 'Rajasegar chandiran'
-full name al thaaf: 'Ahamed Althaf'
-full name ram: 'Ramachandran Nagaraj'
-full name karthik: 'Karthik Baskaran'
-full name arafath: 'Arafathi'
 full name christina: 'Christina D'
 full name anand: 'Anand Edward'
-full name son jena: 'Sanjana A'
+full name son jana: 'Sanjana A'
 full name sham: 'Shyam Chockalingam'
+full name santosh: 'Santosh Kalburgi'
+full name manager: 'Vijayaprasad Sundarasamy'
+full name mugesh: 'Mugesh S'
+full name kishore: 'Kishore'
+full name Kusuma: 'Kusuma Goli'
+full name kishore: 'Mugesh S'
+full name chandira: 'Chandira'
 mobile joel: '9445484948'
 mobile thomas: '9841875021'
 address joel: 'No. 51, 12 street, astalakshmi nagar, alapakkam, chennai 116'

@@ -25,6 +25,7 @@ node package config set prefix:
     edit.left()
 
 node package version: "npm --version\n"
+node package audit: "npm audit\n"
 
 
 pure node dev: "pnpm dev\n"

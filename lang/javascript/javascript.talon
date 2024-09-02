@@ -1,4 +1,7 @@
-tag: user.javascript
+code.language: javascript
+code.language: typescript
+code.language: javascriptreact
+code.language: typescriptreact
 -
 (<user.operator> | is) strict equal: " === "
 (<user.operator> | is) strict not equal: " !== "
@@ -12,8 +15,12 @@ insert log: user.insert_between('console.log(', ')')
 <user.operator> spread: "..."
 
 # react specific
-react {user.react_hooks}:
-  user.insert_react_hook_snippet(react_hooks)
+# react {user.react_hooks}:
+#   user.insert_react_hook_snippet(react_hooks)
+
+pass it as prop:
+  text = edit.selected_text()
+  insert("{text}={{{text}}}")
 
 chain length: ".length"
 chain {user.code_common_member_function}:

@@ -5,6 +5,8 @@ tag(): user.emoji
 # tag(): user.yarn
 # tag(): user.git
 tag(): user.cursorless_experimental_snippets
+settings():
+  user.mouse_continuous_scroll_amount = 240
 
 reveal [<user.text>]:
     user.vscode("workbench.action.showCommands")
@@ -48,7 +50,7 @@ output clear: key(cmd-alt-u)
 salt that: key(fn-f4)
 salt back: key(shift-fn-f4)
 
-# mark that: key(cmd-alt-k)
+mark that: key(cmd-alt-k)
 mark list: key(cmd-alt-m)
 mark next: key(cmd-alt-.)
 mark prev: key(cmd-alt-,)
@@ -96,7 +98,7 @@ toggle search details: user.vscode("workbench.action.search.toggleQueryDetails")
 replace confirm all: key(cmd-alt-enter)
 dev tools: user.vscode('workbench.action.toggleDevTools')
 
-toggle fire: user.vscode("cursorless.toggleDecorations")
+hints toggle: user.vscode("cursorless.toggleDecorations")
 
 # code run without debugging
 code run: key(ctrl-alt-n)

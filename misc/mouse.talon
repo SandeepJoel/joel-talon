@@ -1,36 +1,36 @@
-^(mose | mouse): user.mouse_toggle_control_mouse()
+^(mose | mouse): tracking.control_toggle()
 ^point move: 
-    user.mouse_toggle_control_mouse()
+    tracking.control_toggle()
     sleep(1200ms)
-    user.mouse_toggle_control_mouse()
-^point click: 
-    user.mouse_toggle_control_mouse()
-    sleep(1200ms)
-    user.mouse_toggle_control_mouse()
-    mouse_click(0)
-^point dubclick: 
-    user.mouse_toggle_control_mouse()
-    sleep(1200ms)
-    user.mouse_toggle_control_mouse()
-    mouse_click()
-    mouse_click()  
-^point tripclick: 
-    user.mouse_toggle_control_mouse()
-    sleep(1200ms)
-    user.mouse_toggle_control_mouse()
-    mouse_click()
-    mouse_click()  
-    mouse_click()
-^point midclick: 
-    user.mouse_toggle_control_mouse()
-    sleep(1200ms)
-    user.mouse_toggle_control_mouse()
-    mouse_click(2)
-^point righty: 
-    user.mouse_toggle_control_mouse()
-    sleep(1200ms)
-    user.mouse_toggle_control_mouse()
-    mouse_click(1)
+    tracking.control_toggle()
+# ^point click: 
+#     user.mouse_toggle_control_mouse()
+#     sleep(1200ms)
+#     user.mouse_toggle_control_mouse()
+#     mouse_click(0)
+# ^point dubclick: 
+#     user.mouse_toggle_control_mouse()
+#     sleep(1200ms)
+#     user.mouse_toggle_control_mouse()
+#     mouse_click()
+#     mouse_click()  
+# ^point tripclick: 
+#     user.mouse_toggle_control_mouse()
+#     sleep(1200ms)
+#     user.mouse_toggle_control_mouse()
+#     mouse_click()
+#     mouse_click()  
+#     mouse_click()
+# ^point midclick: 
+#     user.mouse_toggle_control_mouse()
+#     sleep(1200ms)
+#     user.mouse_toggle_control_mouse()
+#     mouse_click(2)
+# ^point righty: 
+#     user.mouse_toggle_control_mouse()
+#     sleep(1200ms)
+#     user.mouse_toggle_control_mouse()
+#     mouse_click(1)
 
 # name: mouse_scroll(-500)
 # frog: mouse_scroll(500)
