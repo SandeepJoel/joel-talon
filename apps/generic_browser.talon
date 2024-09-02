@@ -51,17 +51,9 @@ youtube here <user.text>:
   insert('https://www.youtube.com/results?search_query={user.text}')
   key(enter)
 
-freshrelease that: 
+jira that: 
   term = edit.selected_text()
-  user.open_url('https://freshworks.freshrelease.com/ws/FD/tasks/' + '{term}')
-
-fresh ops id that: 
-  term = edit.selected_text()
-  user.open_url('https://freshopsadmin.freshdesk.com/accounts/' + '{term}')
-
-fresh ops domain that: 
-  term = edit.selected_text()
-  user.open_url('https://freshopsadmin.freshdesk.com/subscriptions/index?utf8=%E2%9C%93&search=' + '{term}')
+  user.open_url('https://gartner.atlassian.net/browse/' + '{term}')
 
 glass door that:
   text = edit.selected_text()
