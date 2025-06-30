@@ -3,12 +3,16 @@ app: Microsoft Teams
 -
 
 settings():
-    user.mouse_continuous_scroll_amount = 300
+    user.mouse_continuous_scroll_amount = 30
 
 
 channel: key(super-e)
 go to left section: key(ctrl-l)
 
+open activity: key(super-1)
+open chat: key(super-2)
+open teams: key(super-3)
+open calendar: key(super-4)
 open helpdesk: key(super-6)
 open inside gartner: key(super-7)
 open onedrive: key(super-8)

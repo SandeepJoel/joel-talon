@@ -3,7 +3,7 @@ app: chrome
 -
 
 settings():
-  user.mouse_continuous_scroll_amount = 350
+  user.mouse_continuous_scroll_amount = 30
 
 # Need to debug why the below commands were not working by default
 zoom in: key(cmd-=)

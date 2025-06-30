@@ -234,3 +234,5 @@ deploy swat cats backend with asset: "bash swatkats-backend-with-asset.sh"
 
 
 tail follow staging log: "tail -f log/staging.log"
+
+start fresh chrome: 'open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security'

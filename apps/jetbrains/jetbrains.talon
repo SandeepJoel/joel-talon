@@ -8,7 +8,7 @@ tag(): user.tabs
 # multiple_cursors.py support end
 
 settings():
-  user.mouse_continuous_scroll_amount = 300
+  user.mouse_continuous_scroll_amount = 30
   
 # Auto complete
 complete: user.idea("action CodeCompletion")

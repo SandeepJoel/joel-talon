@@ -4,7 +4,7 @@ app: Sequel Ace
 # https://sequel-ace.com/shortcuts.html
 
 settings():
-  user.mouse_continuous_scroll_amount = 600
+  user.mouse_continuous_scroll_amount = 30
 
 tab new: key(cmd-t)
 tab quit: key(cmd-w)

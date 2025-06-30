@@ -6,7 +6,7 @@ tag(): user.emoji
 # tag(): user.git
 tag(): user.cursorless_experimental_snippets
 settings():
-  user.mouse_continuous_scroll_amount = 240
+  user.mouse_continuous_scroll_amount = 25
 
 reveal [<user.text>]:
     user.vscode("workbench.action.showCommands")
@@ -177,3 +177,11 @@ termi toggle: user.vscode_and_wait("workbench.action.terminal.toggleTerminal")
 termi scroll up: user.vscode("workbench.action.terminal.scrollUp")
 termi scroll down: user.vscode("workbench.action.terminal.scrollDown")
 termi <number_small>: user.vscode_terminal(number_small)
+
+# copilot
+pilot toggle: user.vscode("workbench.panel.chat")
+pilot explain: user.vscode("github.copilot.chat.explain")
+pilot file attach: user.vscode("github.copilot.chat.attachFile")
+pilot folder attach: user.vscode("github.copilot.chat.attachFolder")
+pilot inline: user.vscode("inlineChat.start")
+pilot focus: user.vscode("workbench.panel.chat.view.copilot.focus")

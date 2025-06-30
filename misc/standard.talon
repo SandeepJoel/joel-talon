@@ -124,6 +124,7 @@ unhide files: key(cmd-shift-.)
 email personal: 'joeltheking00000001@gmail.com'
 email gartner: 'asandeep.joel@gartner.com'
 email client chris: 'chris.humphres@redcross.org'
+email old reader: 'automation.gcom.INVWEBPM10@alphabet.com'
 email official: 'sandeepjoelofficial@gmail.com'
 email joel code: 'joelcode001@gmail.com'
 email office swatkats: 'sandeep.joel+001@freshworks.com'
@@ -148,5 +149,6 @@ address thomas: '19, Valluavar street, Chinna Porur, Porur - 600116'
 auto thomas: 'TN85K2476'
 
 user name joel: "SandeepJoel"
-
+webcode sample: "GCDAOWEB"
+user id joel: "171665105"
 

@@ -7,6 +7,7 @@ move point to <user.running_applications>:
   user.mouse_move_center_active_window()
 ^portal$:
   user.switcher_launch("/Applications/Google Chrome.app")
+  # user.switcher_launch("/Applications/Firefox.app")
 ^finder$:
   user.switcher_launch("/System/Library/CoreServices/Finder.app")
 ^terminal$:

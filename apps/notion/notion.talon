@@ -5,7 +5,7 @@ tag(): user.emoji
 tag(): user.tabs
 
 settings():
-  user.mouse_continuous_scroll_amount = 300
+  user.mouse_continuous_scroll_amount = 35
 
 file hunt [<user.text>]:
   key(cmd-p)

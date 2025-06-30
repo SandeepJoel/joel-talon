@@ -40,6 +40,9 @@ blind search that:
   term = edit.selected_text()
   user.open_url('https://www.teamblind.com/search/' + '{term}')
 
+google hunt <user.text>: 
+  user.open_url("https://google.com/search?q={user.text}")
+
 git hunt <user.text>: 
   user.open_url("https://github.com/search?q={user.text}&type=repositories")
 
