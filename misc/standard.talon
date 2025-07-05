@@ -51,7 +51,6 @@ key(cmd-shift-,): speech.enable()
 pattern is: "Yes" 
 pattern add: "Add " 
 pattern helpdesk: "helpdesk" 
-pattern at freshworks dot com: "@freshworks.com" 
 pattern at gmail dot com: "@gmail.com" 
 pattern jay query: "jQuery" 
 pattern git message build portal assets: " [build portal assets]" 
@@ -67,14 +66,6 @@ pattern rejects: "regex"
 pattern yet again: "yarn"
 pattern dot com: ".com"
 pattern nose jay: "knausj"
-pattern path bootstrap: '/api/_/bootstrap/'
-pattern path ticket fields: '/api/_/ticket_fields'
-pattern path marketplace: '/a/admin/marketplace/gallery?route=home'
-pattern path bootstrap me: '/api/_/bootstrap/me'
-pattern path tickets new: '/a/tickets/new'
-pattern path admin: '/a/admin'
-pattern path account: '/api/_/bootstrap/account/'
-pattern help desk tickets: '/helpdesk_tickets'
 pattern current: './'
 pattern parent: '../'
 pattern grandparent: '../../'
@@ -85,9 +76,6 @@ pattern link github: 'https://github.com/SandeepJoel/'
 pattern link: user.insert_between("https://", "/")
 pattern link plain: user.insert_between("http://", "/")
 pattern link google: "https://www.google.com/"
-
-pattern sequel select tickets: "select * from helpdesk_tickets where account_id="
-pattern sequel select tickets where: "select * from helpdesk_tickets where account_id= and helpdesk_tickets.display_id="
 
 pattern ember get: user.insert_between("Ember.get(this,'", "')")
 pattern decode component: user.insert_between("decodeURIComponent('", "')")
