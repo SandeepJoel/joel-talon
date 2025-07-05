@@ -78,7 +78,6 @@ bundle side kick: "bundle exec sidekiq -C config/sidekiq_client.yml \n"
 bundle shore can: "bundle exec shoryuken -R -C config/shoryuken.yml \n"
 bundle database create: "bundle exec rake db:create"
 bundle database boot strap: "bundle exec rake db:bootstrap"
-bundle ruby: "bundle exec ruby "
 bundle ruby clipboard: 
   insert("bundle exec ruby ")
   insert(clip.text())
@@ -117,19 +116,6 @@ break trace:
   insert("tr")
   key(enter)
 
-ruby account make current one: "a=Account.find(1).make_current"
-ruby account make current two: "a=Account.find(2).make_current"
-ruby account current: "Account.current"
-ruby account launch: user.insert_between("a.launch(:", ")")
-ruby account rollback: user.insert_between("a.rollback(:", ")")
-ruby account add feature: user.insert_between("a.add_feature(:", ")")
-ruby account revoke feature: user.insert_between("a.revoke_feature(:", ")")
-ruby account launch parties: "a.all_launched_features\n"
-ruby account features: "a.enabled_features_list\n"
-ruby launch new portal: "a.launch(:portal_v2, :enable_golden_ox)\n"
-ruby launch multiple ticket forms: "a.launch(:portal_v2, :enable_golden_ox, :multiple_ticket_forms_toggle, :custom_objects_portal_support)\n"
-
-rake translation: "rake i18n:js:export "
 
 rake db create test: "bundle exec rake db:create RAILS_ENV=test"
 rake db bootstrap test: "bundle exec rake db:bootstrap RAILS_ENV=test"
@@ -141,8 +127,6 @@ show process in port: "lsof -t -i:3000"
 kill process: "kill -9 "
 kill process  [<user.text>]: "kill -9 {text}"
 kill process in port: "kill -9 $(lsof -t -i:3000)"
-find bundle name: 
-  user.insert_between("osascript -e 'id of app \"", "\"'")
 
 brew services list: "brew services list\n" 
 brew services start: "brew services start " 
@@ -150,8 +134,6 @@ brew services restart: "brew services restart "
 brew install: "brew install"
 
 memcached: "memcached"
-global begin: "launchctl load /Library/LaunchAgents/com.paloaltonetworks.gp.pangp* \n"
-global stop: "launchctl unload /Library/LaunchAgents/com.paloaltonetworks.gp.pangp* \n"
 
 open code here: "code .\n"
 open code : "code "
@@ -168,25 +150,25 @@ narco: mouse_scroll(-1000)
 sarco: mouse_scroll(1000)
 bower install: "bower install"
 
-ember help: "npx ember --help"
-ember install: "npx ember install"
-ember build: "npx ember build -w\n"
-ember exam: "npx ember exam -s\n"
-ember generate: "npx ember generate "
-ember destroy: "npx ember destroy "
-ember generate route: "npx ember generate route "
-ember destroy route: "npx ember destroy route "
-ember generate component: "npx ember generate component -gc "
-ember generate component without script: "npx ember generate component "
-ember generate component only script: "npx ember generate component-class "
-ember destroy component: "npx ember destroy component "
-ember generate adapter: "npx ember generate adapter "
-ember generate serializer: "npx ember generate serializer "
-ember generate model: "npx ember generate model "
-ember generate service: "npx ember generate service "
-ember generate controller: "npx ember generate controller "
-ember generate help: "npx ember generate --help"
-ember generate util: "npx ember generate util "
+# ember help: "npx ember --help"
+# ember install: "npx ember install"
+# ember build: "npx ember build -w\n"
+# ember exam: "npx ember exam -s\n"
+# ember generate: "npx ember generate "
+# ember destroy: "npx ember destroy "
+# ember generate route: "npx ember generate route "
+# ember destroy route: "npx ember destroy route "
+# ember generate component: "npx ember generate component -gc "
+# ember generate component without script: "npx ember generate component "
+# ember generate component only script: "npx ember generate component-class "
+# ember destroy component: "npx ember destroy component "
+# ember generate adapter: "npx ember generate adapter "
+# ember generate serializer: "npx ember generate serializer "
+# ember generate model: "npx ember generate model "
+# ember generate service: "npx ember generate service "
+# ember generate controller: "npx ember generate controller "
+# ember generate help: "npx ember generate --help"
+# ember generate util: "npx ember generate util "
 
 create react app: "npx create react app"
 
@@ -197,8 +179,6 @@ pattern global git ignore:
 
 pattern dot files: 
   "/Users/sjoel/.dotfiles/"
-
-pattern path helpkit: "/Users/sjoel/myfiles/Freshdesk/helpkit/"
   
 # https://ss64.com/osx/syntax-bashkeyboard.html
 clear line:
@@ -218,19 +198,6 @@ print echo: user.insert_between("echo \"", "\"")
 secure shell test: "ssh -T git@github.com"
 source activate: 'source env/bin/activate\n'
 python app: 'python app.py\n'
-
-deploy mavericks backend: "bash mavericks-backend.sh"
-deploy mavericks frontend: "bash mavericks-frontend.sh"
-deploy mavericks backend with asset: "bash mavericks-backend-with-asset.sh"
-
-deploy shadow fax backend: "bash shadowfax-backend.sh"
-deploy shadow fax frontend: "bash shadowfax-frontend.sh"
-deploy shadow fax full: "bash shadowfax-full.sh"
-deploy shadow fax backend with asset: "bash shadowfax-backend-with-asset.sh"
-deploy swat cats backend: "bash swatkats-backend.sh"
-deploy swat cats frontend: "bash swatkats-frontend.sh"
-deploy swat cats full: "bash swatkats-full.sh"
-deploy swat cats backend with asset: "bash swatkats-backend-with-asset.sh"
 
 
 tail follow staging log: "tail -f log/staging.log"
