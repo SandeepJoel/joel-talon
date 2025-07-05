@@ -13,10 +13,7 @@ search:
 run last:
   key(up)
   key(enter)
-action(edit.page_down):
-  key(command-pagedown)
-action(edit.page_up):
-  key(command-pageup)
+
 slap: key(ctrl--)
 redo: key(ctrl-y)
 clean that: key(cmd-k)
@@ -202,4 +199,4 @@ python app: 'python app.py\n'
 
 tail follow staging log: "tail -f log/staging.log"
 
-start fresh chrome: 'open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security'
+# start fresh chrome: 'open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security'
