@@ -19,6 +19,11 @@ class Actions:
     m = re.match(r"https?:\/\/(.+?)(\/.*)", text)
     actions.clip.set_text(m.group(2))
 
+  def copyLeaf(text: str):
+    """Extract url path values from passed string """
+    m =  re.search(r"([^/]+)$", text)
+    actions.clip.set_text(m.group(1))
+
   def removeDomain(text: str):
     """highlight domain values from passed string """
     m = re.match(r"(https?:\/\/)(.+?)(\/.*)", text)

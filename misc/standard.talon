@@ -41,7 +41,7 @@ end ten: key(enter)
 
 key(cmd-shift-space): speech.disable()
 key(cmd-shift-,): speech.enable()
-# key(ctrl-alt-cmd-m) to switch mic
+clipboard history: key(ctrl-alt-cmd-m)
 
 # below commands for vimac 
 ^month time$: key(fn-f5)

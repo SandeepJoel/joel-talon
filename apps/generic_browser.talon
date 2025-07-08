@@ -15,12 +15,18 @@ go (back | backward):
 (refresh | reload) hard: browser.reload_hard()
 go to clipboard: browser.go(clip.text())
 inspect: key(cmd-shift-c)
+
 copy domain: 
   browser.focus_address()
   user.copyDomain(edit.selected_text())
+
 copy end path: 
   browser.focus_address()
   user.copyPath(edit.selected_text())
+
+copy leaf: 
+  browser.focus_address()
+  user.copyLeaf(edit.selected_text())
 
 remove domain: 
   browser.focus_address()
