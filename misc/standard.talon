@@ -6,26 +6,42 @@ yes indeed: edit.redo()
 paste match: edit.paste_match_style()
 brightness up: key(brightness_up)
 brightness down: key(brightness_down)
-alfred: key(cmd-space)
-alfred select:
+^alfred: key(cmd-space)
+^alfred select:
   text = edit.selected_text()
   key(cmd-space)
   sleep(25ms)
   insert(text)
   edit.selected_text()
   key(cmd-a)
-alfred clipboard:
+^alfred clipboard:
   text = clip.text()
   key(cmd-space)
   sleep(25ms)
   insert(text)
   key(cmd-a)
-alfred [<user.text>]:
+^alfred [<user.text>]:
   key(cmd-space)
   sleep(25ms)
   insert(user.text or "")
   key(enter)
 
+# AI
+^travis hunt: key(ctrl-alt-cmd-p)
+# travis select: key(ctrl-alt-cmd-p)
+^travis select:
+  text = edit.selected_text()
+  key(ctrl-alt-cmd-p)
+  sleep(25ms)
+  insert(text)
+  edit.selected_text()
+  key(cmd-a)
+
+^travis [<user.text>]:
+  key(ctrl-alt-cmd-p)
+  sleep(25ms)
+  insert(user.text or "")
+  key(enter)
 # maccy
 clip history: key(cmd-shift-m) 
 fly fast: key(escape escape)
@@ -136,4 +152,3 @@ auto thomas: 'TN85K2476'
 user name joel: "SandeepJoel"
 webcode sample: "GCDAOWEB"
 user id joel: "171665105"
-
