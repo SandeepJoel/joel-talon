@@ -15,8 +15,8 @@ disable face mode: mode.disable('face')
 # face(stick_out_tongue): 
 #   user.mouse_scroll_right_continuous()
 # face(stick_out_tongue:stop): 
-#   user.mouse_scroll_stop_horizontal()
+#   user.mouse_scroll_stop()
 # face(raise_eyebrows): 
 #   user.mouse_scroll_left_continuous()
 # face(raise_eyebrows:stop): 
-#   user.mouse_scroll_stop_horizontal()
+#   user.mouse_scroll_stop()

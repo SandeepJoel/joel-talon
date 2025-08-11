@@ -27,7 +27,7 @@ brightness down: key(brightness_down)
   key(enter)
 
 # AI
-^travis hunt: key(ctrl-alt-cmd-p)
+^travis: key(ctrl-alt-cmd-p)
 # travis select: key(ctrl-alt-cmd-p)
 ^travis select:
   text = edit.selected_text()
@@ -37,7 +37,7 @@ brightness down: key(brightness_down)
   edit.selected_text()
   key(cmd-a)
 
-^travis [<user.text>]:
+^travis hunt [<user.text>]:
   key(ctrl-alt-cmd-p)
   sleep(25ms)
   insert(user.text or "")
