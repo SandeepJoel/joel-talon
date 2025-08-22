@@ -143,6 +143,8 @@ full name mugesh: 'Mugesh S'
 full name kishore: 'Kishore'
 full name Kusuma: 'Kusuma Goli'
 full name chandira: 'Chandira'
+full name chandira: 'Chandira'
+full name senthil: 'Senthil'
 mobile joel: '9445484948'
 mobile thomas: '9841875021'
 address joel: 'No. 51, 12 street, astalakshmi nagar, alapakkam, chennai 116'
@@ -152,3 +154,7 @@ auto thomas: 'TN85K2476'
 user name joel: "SandeepJoel"
 webcode sample: "GCDAOWEB"
 user id joel: "171665105"
+
+name coretopic: "coretopic-app"
+name key initiatives: "key-initiatives-app"
+name virtual event: "virtualevent-app"

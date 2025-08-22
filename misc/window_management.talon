@@ -5,10 +5,10 @@ window fullscreen: key(cmd-ctrl-f)
 move point to <user.running_applications>: 
   user.switcher_focus(running_applications)
   user.mouse_move_center_active_window()
-^portal$:
-  user.switcher_launch("/Applications/Google Chrome.app")
 # ^portal$:
-#   user.switcher_launch("/Applications/Dia.app")
+#   user.switcher_launch("/Applications/Google Chrome.app")
+^portal$:
+  user.switcher_launch("/Applications/Comet.app")
 ^travis$:
   user.switcher_launch("/Applications/Perplexity.app")
   # user.switcher_launch("/Applications/Firefox.app")

@@ -10,6 +10,11 @@ zoom in: key(cmd-=)
 zoom out: key(cmd--)
 
 hunt this: key(cmd-f)
+# check why the below command does not work
+# hunt this word [<user.text>]: 
+#   key(cmd-f)
+#   sleep(50ms)
+#   insert(user.text)
 settings: key(cmd-,)
 reveal: key(cmd-shift-p)
 reveal [<user.text>]:
