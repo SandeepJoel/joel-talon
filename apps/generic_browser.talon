@@ -57,10 +57,6 @@ youtube here <user.text>:
   insert('https://www.youtube.com/results?search_query={user.text}')
   key(enter)
 
-jira that: 
-  term = edit.selected_text()
-  user.open_url('https://gartner.atlassian.net/browse/' + '{term}')
-
 glass door that:
   text = edit.selected_text()
   user.search_with_search_engine("https://www.google.com/search?q=%s", "glassdoor {text}")
