@@ -98,7 +98,7 @@ toggle search details: user.vscode("workbench.action.search.toggleQueryDetails")
 replace confirm all: key(cmd-alt-enter)
 dev tools: user.vscode('workbench.action.toggleDevTools')
 
-hints toggle: user.vscode("cursorless.toggleDecorations")
+alpha switch: user.vscode("cursorless.toggleDecorations")
 
 # code run without debugging
 code run: key(ctrl-alt-n)
