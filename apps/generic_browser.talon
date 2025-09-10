@@ -50,7 +50,7 @@ git hunt <user.text>:
   user.open_url("https://github.com/search?q={user.text}&type=repositories")
 
 youtube hunt <user.text>: 
-  user.open_url_next_to_current("https://www.youtube.com/results?search_query={user.text}")
+  user.open_url("https://www.youtube.com/results?search_query={user.text}")
 
 youtube here <user.text>:
   browser.focus_address()
