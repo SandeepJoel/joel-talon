@@ -27,21 +27,26 @@ brightness down: key(brightness_down)
   key(enter)
 
 # AI
-^travis: key(ctrl-alt-cmd-p)
-# travis select: key(ctrl-alt-cmd-p)
-^travis select:
-  text = edit.selected_text()
-  key(ctrl-alt-cmd-p)
-  sleep(25ms)
-  insert(text)
-  edit.selected_text()
-  key(cmd-a)
+# ^travis: key(ctrl-alt-cmd-p)
+^travis talk: key(alt-shift-v)
+^travis bye:
+    key(escape)
+    key(alt-a)
 
-^travis hunt [<user.text>]:
-  key(ctrl-alt-cmd-p)
-  sleep(25ms)
-  insert(user.text or "")
-  key(enter)
+^travis toggle: key(alt-a)
+# ^travis select:
+#   text = edit.selected_text()
+#   key(ctrl-alt-cmd-p)
+#   sleep(25ms)
+#   insert(text)
+#   edit.selected_text()
+#   key(cmd-a)
+
+# ^travis hunt [<user.text>]:
+#   key(ctrl-alt-cmd-p)
+#   sleep(25ms)
+#   insert(user.text or "")
+#   key(enter)
 # maccy
 clip history: key(cmd-shift-m) 
 fly fast: key(escape escape)
