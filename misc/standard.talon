@@ -160,5 +160,5 @@ webcode sample: "GCDAOWEB"
 user id joel: "171665105"
 
 name coretopic: "coretopic-app"
-name key initiatives: "key-initiatives-app"
+name key initiative: "key-initiative-app"
 name virtual event: "virtualevent-app"
