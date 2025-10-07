@@ -7,16 +7,26 @@ face(pucker_lips_left):
   user.mouse_scroll_up_continuous()
 face(pucker_lips_left:stop): 
   user.mouse_scroll_stop()
-key(shift-ctrl-f): mode.enable('face')
-key(shift-ctrl-h): mode.disable('face')
-enable face mode: mode.enable('face')
-disable face mode: mode.disable('face')
 
-# face(stick_out_tongue): 
-#   user.mouse_scroll_right_continuous()
+# key(shift-ctrl-f): mode.enable('face')
+# key(shift-ctrl-h): mode.disable('face')
+# enable face mode: mode.enable('face')
+# disable face mode: mode.disable('face')
+
+# Never gets triggered at all
+# face(stick_out_tongue):
+#   user.mouse_scroll_left_continuous()  
 # face(stick_out_tongue:stop): 
 #   user.mouse_scroll_stop()
+
+# Gets triggered too much
 # face(raise_eyebrows): 
-#   user.mouse_scroll_left_continuous()
+#   user.mouse_scroll_right_continuous()
 # face(raise_eyebrows:stop): 
+#   user.mouse_scroll_stop()
+
+
+# face(open_mouth): 
+#   user.mouse_scroll_left_continuous()
+# face(open_mouth:stop): 
 #   user.mouse_scroll_stop()

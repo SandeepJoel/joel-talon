@@ -60,6 +60,11 @@ end ten: key(enter)
 # show menu: key(ctrl-fn-f2)
 # show status: key(ctrl-fn-f8)
 
+key down: key(down)
+key up: key(up)
+key left: key(left)
+key right: key(right)
+
 key(cmd-shift-space): speech.disable()
 key(cmd-shift-,): speech.enable()
 clipboard history: key(ctrl-alt-cmd-m)
