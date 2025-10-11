@@ -3,6 +3,7 @@ north: user.page_up()
 step down: user.page_down()
 slap: edit.undo()
 yes indeed: edit.redo()
+space out: key(enter:2)
 paste match: edit.paste_match_style()
 brightness up: key(brightness_up)
 brightness down: key(brightness_down)
@@ -64,6 +65,7 @@ key down: key(down)
 key up: key(up)
 key left: key(left)
 key right: key(right)
+key tab: key(tab)
 
 key(cmd-shift-space): speech.disable()
 key(cmd-shift-,): speech.enable()
@@ -135,11 +137,9 @@ unhide files: key(cmd-shift-.)
 
 email personal: 'joeltheking00000001@gmail.com'
 email gartner: 'asandeep.joel@gartner.com'
-email client chris: 'chris.humphres@redcross.org'
 email old reader: 'automation.gcom.INVWEBPM10@alphabet.com'
 email official: 'sandeepjoelofficial@gmail.com'
 email joel code: 'joelcode001@gmail.com'
-email office swatkats: 'sandeep.joel+001@freshworks.com'
 email temporary: 'mougroibagrureu-1592@yopmail.com'
 email manager: 'vijayaprasad.sundarasamy@gartner.com'
 full name joel: 'A Sandeep Joel'

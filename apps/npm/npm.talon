@@ -4,6 +4,7 @@ tag: user.npm
 node package init: "npm init "
 node package init yes: "npm init -y"
 node package start: "npm start\n"
+node package dev: "npm run dev\n"
 node package watch: "npm run watch\n"
 node package build: "npm run build\n"
 node package lint: "npm run lint\n"

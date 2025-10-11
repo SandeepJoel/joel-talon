@@ -7,8 +7,6 @@ tag(): user.tabs
 settings():
   user.mouse_continuous_scroll_amount = 30
 
-comet chat: key(alt-a)
-
 comet dark reader: key(alt-shift-d)
 comet dark reader current: key(alt-shift-a)
 comet fake filler: key(cmd-shift-d)

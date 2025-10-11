@@ -61,6 +61,14 @@ glass door that:
   text = edit.selected_text()
   user.search_with_search_engine("https://www.google.com/search?q=%s", "glassdoor {text}")
 
+reveal: key(cmd-shift-p)
+reveal [<user.text>]:
+  key(cmd-shift-p)
+  sleep(300ms)
+  insert(user.text or "")
+  sleep(300ms)
+  key(enter)
+
 
 pattern city: "Chennai, TamilNadu, India" 
 pattern salary: "80k - 100k Euros" 

@@ -17,10 +17,14 @@ inside pipe:
 	key(left)
 inside regex: 
 	insert("//") 
-	key(left)
-empty (a ray| list):
+	key(left)  
+inside (object | brace): 
+	user.insert_between('{', '}')
+inside (array | list): 
+	user.insert_between('[', ']')
+empty (array | list):
   insert("[]")
-empty brace:
+empty (object | brace):
   insert("{}")
 
 inside handle: 
