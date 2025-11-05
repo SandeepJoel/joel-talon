@@ -7,6 +7,11 @@ tag(): user.tabs
 settings():
   user.mouse_continuous_scroll_amount = 30
 
+inspect: key(cmd-alt-c)
+clean that: key(cmd-k)
+clean network: 
+  key(ctrl-l)
+
 comet dark reader: key(alt-shift-d)
 comet dark reader current: key(alt-shift-a)
 comet fake filler: key(cmd-shift-d)

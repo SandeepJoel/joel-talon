@@ -27,3 +27,7 @@ go back: key(super-[)
 forward: key(super-])
 
 hunt this: key(super-f)
+tag name: 
+  insert('@')
+  sleep(100ms)
+  key(tab)

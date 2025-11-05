@@ -36,3 +36,9 @@ face(pucker_lips_left:stop):
 #   user.mouse_scroll_right_continuous()
 # face(eye_wide_left:stop): 
 #   user.mouse_scroll_stop()
+
+
+# face(smile):
+#   user.mouse_scroll_left_continuous()  
+# face(smile:stop): 
+#   user.mouse_scroll_stop()

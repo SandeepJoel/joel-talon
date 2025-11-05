@@ -16,6 +16,7 @@ hunt this: key(cmd-f)
 #   sleep(50ms)
 #   insert(user.text)
 settings: key(cmd-,)
+inspect: key(cmd-shift-c)
 reveal: key(cmd-shift-p)
 reveal [<user.text>]:
   key(cmd-shift-p)

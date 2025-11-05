@@ -46,7 +46,7 @@ conflict accept all both: user.vscode("merge-conflict.accept.all-both")
 
 # personalised actions and extensions
 collapse files: user.vscode("workbench.files.action.collapseExplorerFolders") 
-output clear: key(cmd-alt-u)
+clear output: key(cmd-alt-u)
 salt that: key(fn-f4)
 salt back: key(shift-fn-f4)
 
