@@ -5,8 +5,9 @@ window fullscreen: key(cmd-ctrl-f)
 move point to <user.running_applications>: 
   user.switcher_focus(running_applications)
   user.mouse_move_center_active_window()
-move point to center: 
+move [point to] center : 
   user.mouse_move_center_active_window()
+  
 # ^portal$:
 #   user.switcher_launch("/Applications/Google Chrome.app")
 ^portal$:

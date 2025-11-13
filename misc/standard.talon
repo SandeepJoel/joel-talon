@@ -23,7 +23,7 @@ brightness down: key(brightness_down)
   key(cmd-a)
 ^alfred [<user.text>]:
   key(cmd-space)
-  sleep(25ms)
+  sleep(100ms)
   insert(user.text or "")
   key(enter)
 
@@ -51,6 +51,7 @@ brightness down: key(brightness_down)
 # maccy
 clip history: key(cmd-shift-m) 
 fly fast: key(escape escape)
+next line: key(escape down)
 wipe: key(backspace)
 pull: key(fn-del)
 shoot: key(tab)
@@ -60,6 +61,13 @@ del back: key(shift-enter)
 end ten: key(enter)
 # show menu: key(ctrl-fn-f2)
 # show status: key(ctrl-fn-f8)
+
+#homerow
+letter switch: key(cmd-shift-space) 
+letter search: key(cmd-shift-o) 
+letter scroll: key(cmd-shift-j) 
+
+
 
 key down: key(down)
 key up: key(up)

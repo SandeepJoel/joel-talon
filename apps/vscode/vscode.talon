@@ -186,5 +186,6 @@ pilot folder attach: user.vscode("github.copilot.chat.attachFolder")
 pilot inline: user.vscode("inlineChat.start")
 pilot accept: user.vscode("inlineChat.acceptChanges")
 pilot focus: user.vscode("workbench.panel.chat.view.copilot.focus")
+pilot completions: user.vscode("github.copilot.completions.toggle")
 
 turbo log: user.vscode("turboConsoleLog.insertConsoleLog")
