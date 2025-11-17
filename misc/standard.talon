@@ -35,26 +35,30 @@ brightness down: key(brightness_down)
     key(alt-a)
 
 ^travis toggle: key(alt-a)
-# ^travis select:
-#   text = edit.selected_text()
-#   key(ctrl-alt-cmd-p)
-#   sleep(25ms)
-#   insert(text)
-#   edit.selected_text()
-#   key(cmd-a)
+^travis select:
+  text = edit.selected_text()
+  user.switcher_launch("/Applications/Google Chrome.app")
+  user.mouse_move_center_active_window()
+  user.open_url_next_to_current('https://www.perplexity.ai')
+  sleep(2000ms)
+  insert(text)
+  key(enter)
 
-# ^travis hunt [<user.text>]:
-#   key(ctrl-alt-cmd-p)
-#   sleep(25ms)
-#   insert(user.text or "")
-#   key(enter)
+# Need to optimize and clean this further
+^travis hunt [<user.text>]:
+  user.switcher_launch("/Applications/Google Chrome.app")
+  user.mouse_move_center_active_window()
+  user.open_url_next_to_current('https://www.perplexity.ai')
+  sleep(2000ms)
+  insert(user.text)
+  key(enter)
 # maccy
 clip history: key(cmd-shift-m) 
 fly fast: key(escape escape)
 next line: key(escape down)
 wipe: key(backspace)
 pull: key(fn-del)
-shoot: key(tab)
+shoot: key(tab) 
 shoot back: key(shift-tab)
 del: key(enter)
 del back: key(shift-enter)
@@ -63,7 +67,7 @@ end ten: key(enter)
 # show status: key(ctrl-fn-f8)
 
 #homerow
-letter switch: key(cmd-shift-space) 
+letter switch: key(ctrl-alt-cmd-space) 
 letter search: key(cmd-shift-o) 
 letter scroll: key(cmd-shift-j) 
 

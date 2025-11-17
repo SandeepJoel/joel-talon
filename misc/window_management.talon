@@ -5,13 +5,14 @@ window fullscreen: key(cmd-ctrl-f)
 move point to <user.running_applications>: 
   user.switcher_focus(running_applications)
   user.mouse_move_center_active_window()
-move [point to] center : 
+move center: 
   user.mouse_move_center_active_window()
   
-# ^portal$:
-#   user.switcher_launch("/Applications/Google Chrome.app")
 ^portal$:
-  user.switcher_launch("/Applications/Comet.app")
+  user.switcher_launch("/Applications/Google Chrome.app")
+  user.mouse_move_center_active_window()
+# ^portal$:
+#   user.switcher_launch("/Applications/Comet.app")
 ^travis$:
   user.switcher_launch("/Applications/Perplexity.app")
   # user.switcher_launch("/Applications/Firefox.app")
@@ -21,11 +22,13 @@ move [point to] center :
   user.switcher_launch("/Applications/iTerm.app")
 ^coder$:
   user.switcher_launch("/Applications/Visual Studio Code.app")
+  user.mouse_move_center_active_window()
 ^database$:
   user.switcher_launch("/Applications/Sequel Ace.app")
 ^post man$:
   user.switcher_launch("/Applications/Postman.app")
-^sublime$:
-  user.switcher_launch("/Applications/Sublime Text.app")
+^notion$:
+  user.switcher_launch("/Applications/Notion.app")
+  user.mouse_move_center_active_window()
 ^monitor$:
   user.switcher_launch("/System/Applications/Utilities/Activity Monitor.app")
