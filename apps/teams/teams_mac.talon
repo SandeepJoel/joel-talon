@@ -31,3 +31,8 @@ tag name:
   insert('@')
   sleep(100ms)
   key(tab)
+
+tag everyone: 
+  insert('@everyone')
+  sleep(300ms)
+  key(tab)

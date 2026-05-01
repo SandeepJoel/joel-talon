@@ -88,6 +88,7 @@ clipboard history: key(ctrl-alt-cmd-m)
 # scroll mode: key(fn-f6)
 ^hold <user.modifier_with_keys>: key(modifier_with_keys)
 
+pattern no jira: "NO-JIRA" 
 pattern is: "Yes" 
 pattern add: "Add " 
 pattern helpdesk: "helpdesk" 
@@ -109,6 +110,7 @@ pattern nose jay: "knausj"
 pattern current: './'
 pattern parent: '../'
 pattern grandparent: '../../'
+pattern gee npm: 'g-npm-'
 pattern link link tree: 'https://linktr.ee/sandeepjoel'
 pattern link linked in: 'https://www.linkedin.com/in/sandeepjoel/'
 pattern link stack overflow: 'https://stackoverflow.com/users/2933127/sandeep-joel'
@@ -143,6 +145,8 @@ pattern tag Fragment:
 double <user.number_key>: key(number_key number_key)
 triple <user.number_key>: key(number_key number_key number_key)
 triple double quotes: user.insert_between('"""', '"""')
+website link {user.website}: '{website}'
+
 
 unhide files: key(cmd-shift-.)
 # screen color switch: key(ctrl-alt-cmd-8)
@@ -160,7 +164,7 @@ full name anand: 'Anand Edward'
 full name son jana: 'Sanjana A'
 full name sham: 'Shyam Chockalingam'
 full name santosh: 'Santosh Kalburgi'
-full name manager: 'Vijayaprasad Sundarasamy'
+full name manager: 'advanced search '
 full name mugesh: 'Mugesh S'
 full name kishore: 'Kishore'
 full name Kusuma: 'Kusuma Goli'
@@ -176,7 +180,17 @@ user name joel: "SandeepJoel"
 webcode sample: "GCDAOWEB"
 user id joel: "171665105"
 
-name coretopic: "coretopic-app"
-name key initiative: "key-initiative-app"
-name virtual event: "virtualevent-app"
-name headerfooter: "gheaderfooter"
+repo coretopic: "coretopic-app"
+repo elearning: "elearning-app"
+repo key initiative: "key-initiative-app"
+repo virtual event: "virtualevent-app"
+repo header [footer]: "gheaderfooter"
+repo homepage: "nxtgen-homepage-app"
+repo next gen notification: "g-npm-nxtgen-notification-view"
+repo type ahead: "gsearch-typeahead"
+repo advanced search : "gsearch-advanced-search"
+repo inquiry: "g-npm-inquiry"
+repo ui: "g-npm-ui"
+repo analytics: "g-npm-analytics"
+repo utils: "g-npm-utils"
+repo loading components: "g-npm-loading-components"

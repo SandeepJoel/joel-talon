@@ -13,11 +13,12 @@ move center:
   user.mouse_move_center_active_window()
 # ^portal$:
 #   user.switcher_launch("/Applications/Comet.app")
-^travis$:
-  user.switcher_launch("/Applications/Perplexity.app")
   # user.switcher_launch("/Applications/Firefox.app")
 ^finder$:
   user.switcher_launch("/System/Library/CoreServices/Finder.app")
+^teams$:
+  user.switcher_launch("/Applications/Microsoft Teams.app")
+  user.mouse_move_center_active_window()
 ^terminal$:
   user.switcher_launch("/Applications/iTerm.app")
 ^coder$:

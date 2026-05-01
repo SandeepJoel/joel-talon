@@ -55,7 +55,8 @@ freshkit run: "fdk run \n"
 freshkit version: "fdk -v \n"
 freshkit validate: "fdk validate "
 
-list all: "ls -all\n"
+list all: "ls -all"
+list all node modules: "ls -all node_modules\n"
 list file size: "du -sh *\n"
 folder new: "mkdir "
 folder delete: "rmdir "
@@ -200,3 +201,5 @@ python app: 'python app.py\n'
 tail follow staging log: "tail -f log/staging.log"
 
 # start fresh chrome: 'open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security'
+
+go codebases: "go-codebases"

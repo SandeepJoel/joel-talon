@@ -16,8 +16,8 @@ face(pucker_lips_left:stop):
 
 # key(shift-ctrl-f): mode.enable('face')
 # key(shift-ctrl-h): mode.disable('face')
-# enable face mode: mode.enable('face')
-# disable face mode: mode.disable('face')
+enable face mode: mode.enable('face')
+disable face mode: mode.disable('face')
 
 # Never gets triggered at all
 # face(stick_out_tongue):
