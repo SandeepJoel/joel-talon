@@ -2,8 +2,6 @@ os: mac
 app: chrome
 -
 
-settings():
-  user.mouse_continuous_scroll_amount = 30
 
 # Need to debug why the below commands were not working by default
 zoom in: key(cmd-=)
@@ -69,3 +67,4 @@ close tabs way right: key(alt-shift-r)
 close other tabs: key(alt-shift-w)
 toggle tab pin: key(ctrl-cmd-p)
 toggle tab numbers: key(ctrl-space)
+chrome talk: key(cmd-shift-.)

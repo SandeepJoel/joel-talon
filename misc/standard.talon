@@ -28,31 +28,56 @@ brightness down: key(brightness_down)
   key(enter)
 
 # AI
-# ^travis: key(ctrl-alt-cmd-p)
-^travis talk: key(alt-shift-v)
-^travis bye:
-    key(escape)
-    key(alt-a)
+^travis: key(cmd-shift-q)
+# ^travis talk: key(alt-shift-v)
+# ^travis bye:
+#     key(escape escape)
+#     key(cmd-w)
+# ^travis toggle: key(alt-a)
 
-^travis toggle: key(alt-a)
-^travis select:
+^gemini select:
   text = edit.selected_text()
   user.switcher_launch("/Applications/Google Chrome.app")
   user.mouse_move_center_active_window()
-  user.open_url_next_to_current('https://www.perplexity.ai')
+  user.open_url_next_to_current('https://gemini.google.com/app')
   sleep(2000ms)
   insert(text)
   key(enter)
 
 # Need to optimize and clean this further
-^travis hunt [<user.text>]:
+^gemini hunt [<user.text>]:
   user.switcher_launch("/Applications/Google Chrome.app")
   user.mouse_move_center_active_window()
-  user.open_url_next_to_current('https://www.perplexity.ai')
+  user.open_url_next_to_current('https://gemini.google.com/app')
   sleep(2000ms)
   insert(user.text)
   key(enter)
-# maccy
+
+# ^chat select:
+#   text = edit.selected_text()
+#   user.switcher_launch("/Applications/Google Chrome.app")
+#   user.mouse_move_center_active_window()
+#   key(cmd-shift-a)
+#   sleep(100ms)
+#   insert('chat.gartner.com')
+#   key(enter)
+#   sleep(100ms)
+#   insert(text)  
+
+# # Need to optimize and clean this further
+# ^chat hunt [<user.text>]:
+#   user.switcher_launch("/Applications/Google Chrome.app")
+#   user.mouse_move_center_active_window()
+#   key(cmd-shift-a)
+#   sleep(100ms)
+#   insert('chat.gartner.com')
+#   key(enter)
+#   sleep(500ms)
+#   user.click_text_without_disambiguation("Ask me anything")  
+#   insert(user.text)
+
+
+  # maccy
 clip history: key(cmd-shift-m) 
 fly fast: key(escape escape)
 next line: key(escape down)
@@ -67,9 +92,9 @@ end ten: key(enter)
 # show status: key(ctrl-fn-f8)
 
 #homerow
-letter switch: key(ctrl-alt-cmd-space) 
-letter search: key(cmd-shift-o) 
-letter scroll: key(cmd-shift-j) 
+# letter switch: key(ctrl-alt-cmd-space) 
+# letter search: key(cmd-shift-o) 
+# letter scroll: key(cmd-shift-j) 
 
 
 
@@ -80,7 +105,7 @@ key right: key(right)
 key tab: key(tab)
 
 key(cmd-shift-space): speech.disable()
-key(cmd-shift-,): speech.enable()
+
 clipboard history: key(ctrl-alt-cmd-m)
 
 # below commands for vimac 

@@ -5,8 +5,6 @@ tag(): user.emoji
 # tag(): user.yarn
 # tag(): user.git
 tag(): user.cursorless_experimental_snippets
-settings():
-  user.mouse_continuous_scroll_amount = 25
 
 reveal [<user.text>]:
     user.vscode("workbench.action.showCommands")
@@ -111,18 +109,10 @@ emmet wrap this: user.vscode("editor.emmet.action.wrapWithAbbreviation")
 
 # Use `alt-left` and `alt-right` to navigate the bread crumb
 
-command setup worker: "message = JSON.parse(JSON.stringify(message));"
 git blame: user.vscode("gitlens.toggleFileBlame")
 git discord: user.vscode("git.cleanAll")
 toggle wrapper: key(cmd-')
 
-pattern till new line: "(.|\\n)*"
-pattern ruby def: "def "
-
-# image preview: user.vscode("svgPreview.showPreviewToSide")
-preview markdown: user.vscode("markdown.showPreview")
-# name: mouse_scroll(-150)
-# frog: mouse_scroll(150)
 (num|numb) <user.number_key>: key(number_key)
 discard everything: 
   key(cmd-w)
@@ -164,6 +154,7 @@ file hunt current folder:
 git stash apply: user.vscode("git.stashApply")
 switch term: user.vscode("workbench.action.terminal.focus")
 switch code: user.vscode("workbench.action.focusActiveEditorGroup")
+# turbo log: user.vscode("turboConsoleLog.insertConsoleLog")
 
 
 termi external: user.vscode("workbench.action.terminal.openNativeConsole")
@@ -178,14 +169,44 @@ termi scroll up: user.vscode("workbench.action.terminal.scrollUp")
 termi scroll down: user.vscode("workbench.action.terminal.scrollDown")
 termi <number_small>: user.vscode_terminal(number_small)
 
-# copilot
+# copilot office
 pilot toggle: user.vscode("workbench.panel.chat")
+pilot new: user.vscode("workbench.action.chat.newChat.copilotIcon")
 pilot explain: user.vscode("github.copilot.chat.explain")
 pilot file attach: user.vscode("github.copilot.chat.attachFile")
 pilot folder attach: user.vscode("github.copilot.chat.attachFolder")
 pilot inline: user.vscode("inlineChat.start")
+pilot hunt [<user.text>]: 
+  user.vscode("workbench.panel.chat")
+  sleep(100ms)
+  insert(user.text)
+pilot select:
+  text = user.selected_text_single_line()
+  user.vscode("workbench.panel.chat.view.copilot.focus")
+  sleep(100ms)
+  insert(text)
 pilot accept: user.vscode("inlineChat.acceptChanges")
 pilot focus: user.vscode("workbench.panel.chat.view.copilot.focus")
 pilot completions: user.vscode("github.copilot.completions.toggle")
 
-turbo log: user.vscode("turboConsoleLog.insertConsoleLog")
+# claude personal
+claud list: user.vscode("claudeVSCodeSessionsList.focus")
+claud chat: user.vscode("claude-vscode.sidebar.open")
+claud new: user.vscode("workbench.action.chat.openNewSessionEditor.claude-code")
+claud hunt [<user.text>]: 
+  user.vscode("claude-vscode.sidebar.open")
+  sleep(100ms)
+  insert(user.text)
+claud select:
+  text = user.selected_text_single_line()
+  user.vscode("claude-vscode.sidebar.open")
+  sleep(100ms)
+  insert(text)
+
+
+# the following command always crashes, so whenever you're free, deeply analyse it
+# show shortcuts select:
+#   text = edit.selected_text()
+#   user.vscode("workbench.action.openGlobalKeybindings")  
+#   sleep(500ms)
+#   insert(text)
