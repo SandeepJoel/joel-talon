@@ -169,8 +169,9 @@ termi scroll up: user.vscode("workbench.action.terminal.scrollUp")
 termi scroll down: user.vscode("workbench.action.terminal.scrollDown")
 termi <number_small>: user.vscode_terminal(number_small)
 
+chat switch: user.vscode("workbench.action.toggleAuxiliaryBar")
 # copilot office
-pilot toggle: user.vscode("workbench.panel.chat")
+pilot chat: user.vscode("workbench.panel.chat")
 pilot new: user.vscode("workbench.action.chat.newChat.copilotIcon")
 pilot explain: user.vscode("github.copilot.chat.explain")
 pilot file attach: user.vscode("github.copilot.chat.attachFile")

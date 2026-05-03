@@ -28,7 +28,7 @@ brightness down: key(brightness_down)
   key(enter)
 
 # AI
-^travis: key(cmd-shift-q)
+# ^travis: key(cmd-shift-q)
 # ^travis talk: key(alt-shift-v)
 # ^travis bye:
 #     key(escape escape)
@@ -53,29 +53,38 @@ brightness down: key(brightness_down)
   insert(user.text)
   key(enter)
 
-# ^chat select:
-#   text = edit.selected_text()
-#   user.switcher_launch("/Applications/Google Chrome.app")
-#   user.mouse_move_center_active_window()
-#   key(cmd-shift-a)
-#   sleep(100ms)
-#   insert('chat.gartner.com')
-#   key(enter)
-#   sleep(100ms)
-#   insert(text)  
+^chat select:
+  text = edit.selected_text()
+  user.switcher_launch("/Applications/Google Chrome.app")
+  user.mouse_move_center_active_window()
+  user.open_url_next_to_current('https://chatgpt.com/')  
+  sleep(200ms)
+  insert(text)  
 
-# # Need to optimize and clean this further
-# ^chat hunt [<user.text>]:
-#   user.switcher_launch("/Applications/Google Chrome.app")
-#   user.mouse_move_center_active_window()
-#   key(cmd-shift-a)
-#   sleep(100ms)
-#   insert('chat.gartner.com')
-#   key(enter)
-#   sleep(500ms)
-#   user.click_text_without_disambiguation("Ask me anything")  
-#   insert(user.text)
+^chat hunt [<user.text>]:
+  user.switcher_launch("/Applications/Google Chrome.app")
+  user.mouse_move_center_active_window()
+  user.open_url_next_to_current('https://chatgpt.com/')  
+  sleep(200ms)
+  insert(user.text)
 
+^chat same hunt [<user.text>]:
+  user.switcher_launch("/Applications/Google Chrome.app")
+  user.mouse_move_center_active_window()
+  key(cmd-shift-a)
+  sleep(100ms)
+  insert('https://chatgpt.com/')
+  key(enter)
+  sleep(200ms)  
+  insert(user.text)
+
+^chat same:
+  user.switcher_launch("/Applications/Google Chrome.app")
+  user.mouse_move_center_active_window()
+  key(cmd-shift-a)
+  sleep(100ms)
+  insert('https://chatgpt.com/')
+  key(enter)
 
   # maccy
 clip history: key(cmd-shift-m) 
