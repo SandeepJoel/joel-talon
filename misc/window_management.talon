@@ -24,6 +24,14 @@ move center:
 ^coder$:
   user.switcher_launch("/Applications/Visual Studio Code.app")
   user.mouse_move_center_active_window()
+^coder <user.text>:
+  user.switcher_launch("/Applications/Visual Studio Code.app")
+  user.mouse_move_center_active_window()
+  sleep(100ms)
+  user.vscode("workbench.action.switchWindow")
+  sleep(100ms)
+  insert(user.text)
+  key(enter)
 ^database$:
   user.switcher_launch("/Applications/Sequel Ace.app")
 ^post man$:
