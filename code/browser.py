@@ -1,6 +1,8 @@
 from talon import Context, actions, Module
 import re
 
+BROWSER = "/Applications/Google Chrome.app"
+
 ctx = Context()
 ctx.matches = r"""
 tag: browser
@@ -9,6 +11,11 @@ tag: browser
 mod = Module()
 @mod.action_class
 class Actions:
+  def launch_browser():
+    """Launch the default browser"""
+    actions.user.switcher_launch(BROWSER)
+
+
   def copyDomain(text: str):
     """Extract domain values from passed string """
     m = re.match(r"https?:\/\/(.+?)(\/)", text)

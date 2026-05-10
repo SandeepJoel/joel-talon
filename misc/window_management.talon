@@ -9,7 +9,7 @@ move center:
   user.mouse_move_center_active_window()
   
 ^portal$:
-  user.switcher_launch("/Applications/Google Chrome.app")
+  user.launch_browser()
   user.mouse_move_center_active_window()
 # ^portal$:
 #   user.switcher_launch("/Applications/Comet.app")
@@ -18,6 +18,9 @@ move center:
   user.switcher_launch("/System/Library/CoreServices/Finder.app")
 ^teams$:
   user.switcher_launch("/Applications/Microsoft Teams.app")
+  user.mouse_move_center_active_window()
+^slack$:
+  user.switcher_launch("/Applications/Slack.app")
   user.mouse_move_center_active_window()
 ^terminal$:
   user.switcher_launch("/Applications/iTerm.app")

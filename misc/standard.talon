@@ -25,7 +25,7 @@ brightness down: key(brightness_down)
   key(cmd-space)
   sleep(100ms)
   insert(user.text or "")
-  key(enter)
+
 
 # AI
 # ^travis: key(cmd-shift-q)
@@ -37,7 +37,7 @@ brightness down: key(brightness_down)
 
 ^gemini select:
   text = edit.selected_text()
-  user.switcher_launch("/Applications/Google Chrome.app")
+  user.launch_browser()
   user.mouse_move_center_active_window()
   user.open_url_next_to_current('https://gemini.google.com/app')
   sleep(2000ms)
@@ -46,7 +46,7 @@ brightness down: key(brightness_down)
 
 # Need to optimize and clean this further
 ^gemini hunt [<user.text>]:
-  user.switcher_launch("/Applications/Google Chrome.app")
+  user.launch_browser()
   user.mouse_move_center_active_window()
   user.open_url_next_to_current('https://gemini.google.com/app')
   sleep(2000ms)
@@ -55,21 +55,21 @@ brightness down: key(brightness_down)
 
 ^chat select:
   text = edit.selected_text()
-  user.switcher_launch("/Applications/Google Chrome.app")
+  user.launch_browser()
   user.mouse_move_center_active_window()
   user.open_url_next_to_current('https://chatgpt.com/')  
-  sleep(200ms)
+  sleep(1000ms)
   insert(text)  
 
-^chat hunt [<user.text>]:
-  user.switcher_launch("/Applications/Google Chrome.app")
+^chat new hunt [<user.text>]:
+  user.launch_browser()
   user.mouse_move_center_active_window()
   user.open_url_next_to_current('https://chatgpt.com/')  
-  sleep(200ms)
+  sleep(1000ms)
   insert(user.text)
 
-^chat same hunt [<user.text>]:
-  user.switcher_launch("/Applications/Google Chrome.app")
+^chat hunt [<user.text>]:
+  user.launch_browser()
   user.mouse_move_center_active_window()
   key(cmd-shift-a)
   sleep(100ms)
@@ -78,8 +78,8 @@ brightness down: key(brightness_down)
   sleep(200ms)  
   insert(user.text)
 
-^chat same:
-  user.switcher_launch("/Applications/Google Chrome.app")
+^chat page:
+  user.launch_browser()
   user.mouse_move_center_active_window()
   key(cmd-shift-a)
   sleep(100ms)
@@ -112,7 +112,9 @@ key up: key(up)
 key left: key(left)
 key right: key(right)
 key tab: key(tab)
-
+whisper:
+  key(fn)
+  speech.disable()
 key(cmd-shift-space): speech.disable()
 
 clipboard history: key(ctrl-alt-cmd-m)

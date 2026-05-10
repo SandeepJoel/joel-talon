@@ -66,6 +66,12 @@ project [<user.text>]:
 
 google that: key(ctrl-alt-g)
 tab (new | nil): key(cmd-n)
+tab quit last: 
+  app.tab_previous()
+  user.tab_close_wrapper()
+tab quit next: 
+  app.tab_next()
+  user.tab_close_wrapper()
 toggle tab pin: key(cmd-k shift-enter)
 # meta: key(alt-/)
 sel meta: key(alt-shift-/)
@@ -170,6 +176,7 @@ termi scroll down: user.vscode("workbench.action.terminal.scrollDown")
 termi <number_small>: user.vscode_terminal(number_small)
 
 chat switch: user.vscode("workbench.action.toggleAuxiliaryBar")
+secondary large: user.vscode("workbench.action.toggleMaximizedAuxiliaryBar")
 # copilot office
 pilot chat: user.vscode("workbench.panel.chat")
 pilot new: user.vscode("workbench.action.chat.newChat.copilotIcon")
@@ -193,7 +200,8 @@ pilot completions: user.vscode("github.copilot.completions.toggle")
 # claude personal
 claud list: user.vscode("claudeVSCodeSessionsList.focus")
 claud chat: user.vscode("claude-vscode.sidebar.open")
-claud new: user.vscode("workbench.action.chat.openNewSessionEditor.claude-code")
+# claud new: user.vscode("workbench.action.chat.openNewSessionEditor.claude-code")
+claud new: user.vscode("claude-vscode.window.open")
 claud hunt [<user.text>]: 
   user.vscode("claude-vscode.sidebar.open")
   sleep(100ms)
@@ -203,6 +211,8 @@ claud select:
   user.vscode("claude-vscode.sidebar.open")
   sleep(100ms)
   insert(text)
+claud accept:
+  user.vscode("claude-code.acceptProposedDiff")
 
 
 # the following command always crashes, so whenever you're free, deeply analyse it

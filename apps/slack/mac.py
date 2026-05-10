@@ -9,6 +9,10 @@ edit = actions.edit
 
 @ctx.action_class("user")
 class UserActions:
+  def messaging_upload_file():
+    """Triggers file upload in slack"""
+    actions.key("cmd-o")
+
   def find_everywhere(text: str):
     """Triggers find in all channels"""
     actions.key("cmd-g")
