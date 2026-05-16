@@ -140,6 +140,7 @@ git revision parse head: "git rev-parse head"
 git config local: "git config --local -e\n"
 git config global pull rebase false: "git config --global pull.rebase false"
 git config list: "git config --list"
+git config remote: "git config --get remote.origin.url \n"
 
 git clone clipboard:
   insert("git clone ")

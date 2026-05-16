@@ -125,6 +125,7 @@ clipboard history: key(ctrl-alt-cmd-m)
 ^hold <user.modifier_with_keys>: key(modifier_with_keys)
 
 pattern no jira: "NO-JIRA" 
+pattern gera: "EC-75444"
 pattern is: "Yes" 
 pattern add: "Add " 
 pattern helpdesk: "helpdesk" 
