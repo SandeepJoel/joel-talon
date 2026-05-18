@@ -48,10 +48,19 @@ brightness down: key(brightness_down)
 ^gemini hunt [<user.text>]:
   user.launch_browser()
   user.mouse_move_center_active_window()
-  user.open_url_next_to_current('https://gemini.google.com/app')
-  sleep(2000ms)
-  insert(user.text)
+  key(cmd-shift-a)
+  sleep(100ms)
+  insert('https://gemini.google.com/app')
   key(enter)
+  sleep(200ms)
+  insert(user.text)
+
+^gemini new hunt [<user.text>]:
+  user.launch_browser()
+  user.mouse_move_center_active_window()
+  user.open_url_next_to_current('https://gemini.google.com/app')
+  sleep(1000ms)
+  insert(user.text)
 
 ^chat select:
   text = edit.selected_text()
@@ -112,8 +121,8 @@ key up: key(up)
 key left: key(left)
 key right: key(right)
 key tab: key(tab)
-whisper:
-  key(fn)
+^whisper$:
+  key(fn-space)
   speech.disable()
 key(cmd-shift-space): speech.disable()
 
@@ -131,9 +140,6 @@ pattern add: "Add "
 pattern helpdesk: "helpdesk" 
 pattern at gmail dot com: "@gmail.com" 
 pattern jay query: "jQuery" 
-pattern git message build portal assets: " [build portal assets]" 
-pattern asset sink: "asset_sync" 
-pattern warts up: "whatsapp" 
 pattern a ray: "array" 
 pattern delete: "delete" 
 pattern bullion: "boolean" 
@@ -148,17 +154,9 @@ pattern current: './'
 pattern parent: '../'
 pattern grandparent: '../../'
 pattern gee npm: 'g-npm-'
-pattern link link tree: 'https://linktr.ee/sandeepjoel'
-pattern link linked in: 'https://www.linkedin.com/in/sandeepjoel/'
-pattern link stack overflow: 'https://stackoverflow.com/users/2933127/sandeep-joel'
-pattern link github: 'https://github.com/SandeepJoel/'
 pattern link: user.insert_between("https://", "/")
 pattern link plain: user.insert_between("http://", "/")
 pattern link google: "https://www.google.com/"
-
-pattern ember get: user.insert_between("Ember.get(this,'", "')")
-pattern decode component: user.insert_between("decodeURIComponent('", "')")
-pattern encode component: user.insert_between("encodeURIComponent('", "')")
 pattern date: user.insert_between("new Date(", ")")
 
 

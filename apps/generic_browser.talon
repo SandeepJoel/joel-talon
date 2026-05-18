@@ -42,6 +42,14 @@ google here <user.text>:
   insert(user.text)
   key(enter)
 
+open here {user.website}:
+   browser.focus_address()
+   key(delete)
+   sleep(200ms)
+   insert(website)
+   sleep(500ms)
+   key(enter)
+
 blind search that: 
   term = edit.selected_text()
   user.open_url('https://www.teamblind.com/search/' + '{term}')
@@ -61,6 +69,11 @@ glass door that:
   text = edit.selected_text()
   user.search_with_search_engine("https://www.google.com/search?q=%s", "glassdoor {text}")
 
+translate:
+  user.contextual_menu_open()
+  sleep(200ms)
+  key(t)
+
 reveal: key(cmd-shift-p)
 reveal [<user.text>]:
   key(cmd-shift-p)
@@ -70,19 +83,10 @@ reveal [<user.text>]:
   key(enter)
 
 
-pattern city: "Chennai, TamilNadu, India" 
+pattern chennai: "Chennai, TamilNadu, India" 
 pattern salary: "80k - 100k Euros" 
-# Office specific
-pattern retest this please: 'retest this please'
-pattern retest coverity: "retest coverity"
-pattern retest bundle: "retest bundle size"
-pattern retest default: "retest default"
-pattern retest linters: "retest linters"
-pattern retest threads: "retest threads-addon"
-pattern retest common: "retest common-addon"
-pattern retest ember compatibility: "retest ember compatibility"
-pattern path authenticate custom objects: 'api/channel/v2/authenticate/custom_objects'
-pattern path custom objects schemas: 'a/custom-objects/schemas/'
+pattern notice: "60 days" 
+
 
 template hello sir:
   insert("Hello Sir,")
@@ -102,20 +106,17 @@ template regards:
   sleep(50ms)
   insert("A.Sandeep Joel")
 
-template recruiter connect:
-  insert("""Hi Cormac Fagan,
+template recruiter:
+  insert("Hi ,\nI'm Sandeep Joel, a Lead Frontend Engineer with 10+ years of experience building software at Gartner and Freshworks. I am looking for a job in middle east countries.\n\nA bit about myself professional experience:\nCurrently serving as Lead Frontend Engineer at Gartner since January 2024. I have improved frontend performance by reducing the LCP metric in gartner.com homepage and in other 8 FE apps by 50%, impacting 100K active users, and resolved over 10 Snyk vulnerabilities to enhance security by 60%. Previously at Freshworks from 2016 to 2023 in roles progressing from Web Developer to Senior Frontend Engineer, I developed features with 100% code coverage following WCAG standards using A/B testing, feature flags and mentored teams.\n\nKey skills and achievements:\n- Expert in HTML5, CSS3, ReactJS (5+ years), NextJS (3+ years), Javascript (10+ years), Typescript (2+ years), Redux, Material UI, Styled Components, Tailwind, Jest, React Testing Library, Webpack, Storybook, Node.js, AWS, Azure and Distributed Systems.\n- Enabled protection against attacks like Clickjacking, SSL Stripping, XSS and CSRF.\n- Awards include Freshdesk Innovation Award Q4 2019 and MVP for 2018-2019;\n- Led organization-wide sessions on React and Next.js.\n- Strong in performance optimization, accessibility, security, and mentoring 3-5 engineers.\n- Migrated 7+ frontend apps from react 16 to react 19 and from material UI4 to material UI5 using codemods, github copilot(AI tools) and chrome devtools MCP server.\n- Designed a fully typed design system using React, TypeScript, Storybook, adopted by 8+ product engineering teams\n\nEach step reminded me that technology is most meaningful when it serves people. I really want to be a part of company which adds value to people.\nThat's why after going through your company website, its values and various employee reviews, I thought it would be nice to work with your company😊.\n\nHere's a little about me:\nLinkedIn: https://www.linkedin.com/in/sandeepjoel/\nPortfolio: https://linktr.ee/sandeepjoel\nIf there's a way I can bring value to your team, I'd be grateful for the chance to explore it further.\n\nWarm regards,\nSandeep Joel\n📩 sandeepjoelofficial@gmail.com\n📱 +91 9445484948")
+  key(home)
+  key(up:3)
+  key(end)
 
-  I hope you are doing great.I am interested in the Senior Frontend Engineer role you posted recently (https://tinyurl.com/28b6oldn). And I am confident that I can add great value to your company.
-  So would you be willing for a quick chat regarding this position ?
-  
-  Best regards,
-  A. Sandeep Joel, Freshworks""")
-
-template developer connect:
+template developer short:
   insert("""Hi Amy,
   I am Sandeep Joel and I know that we've not met but when I was searching for Senior Frontend Engineer jobs in Europe I came across your company, and I just wanted to know about culture and work live balance of your company. """)
 
-template developer referral:
+template developer Medium:
   insert("""Hello Emily,
   Thanks for accepting my invitation. This is A.Sandeep Joel from Freshworks and I am currently looking for Senior Frontend Software Engineer role within Europe. So I wanted to know about the work life balance of your current company. And also will you be willing to refer me in your company for this position. https://www.linkedin.com/jobs/view/3686345540/?eBP=JOB_SEARCH_ORGANIC&refId=ZBXOSrsTwZCvbWhLYomW%2Fw%3D%3D&trackingId=S7QOYvE9olUAxBEnAr0Qdg%3D%3D&trk=flagship3_search_srp_jobs""")
 

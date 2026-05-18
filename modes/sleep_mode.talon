@@ -6,5 +6,9 @@ mode: sleep
 #   speech.enable()
 
 ^whisper stop$:
-    key(fn)
+    key(fn-space)
     speech.enable()
+    sleep(1500ms)
+    edit.extend_word_left()
+    edit.extend_word_left()
+    edit.delete()

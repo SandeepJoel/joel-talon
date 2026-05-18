@@ -24,6 +24,8 @@ move center:
   user.mouse_move_center_active_window()
 ^terminal$:
   user.switcher_launch("/Applications/iTerm.app")
+^activity$:
+  user.switcher_launch("/System/Applications/Utilities/Activity Monitor.app")
 ^coder$:
   user.switcher_launch("/Applications/Visual Studio Code.app")
   user.mouse_move_center_active_window()
