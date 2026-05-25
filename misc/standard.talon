@@ -35,6 +35,24 @@ brightness down: key(brightness_down)
 #     key(cmd-w)
 # ^travis toggle: key(alt-a)
 
+^gartner page:
+  user.launch_browser()
+  sleep(100ms)
+  user.mouse_move_center_active_window()
+  key(cmd-shift-a)
+  sleep(100ms)
+  insert('chat.gartner.com')
+  key(enter)
+
+^gemini page:
+  user.launch_browser()
+  sleep(100ms)
+  user.mouse_move_center_active_window()
+  key(cmd-shift-a)
+  sleep(100ms)
+  insert('https://gemini.google.com/app')
+  key(enter)
+
 ^gemini select:
   text = edit.selected_text()
   user.launch_browser()
@@ -134,7 +152,7 @@ clipboard history: key(ctrl-alt-cmd-m)
 ^hold <user.modifier_with_keys>: key(modifier_with_keys)
 
 pattern no jira: "NO-JIRA" 
-pattern gera: "EC-75444"
+pattern gera: "EC-75988"
 pattern is: "Yes" 
 pattern add: "Add " 
 pattern helpdesk: "helpdesk" 

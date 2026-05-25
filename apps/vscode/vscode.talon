@@ -48,12 +48,13 @@ clear output: key(cmd-alt-u)
 salt that: key(fn-f4)
 salt back: key(shift-fn-f4)
 
-mark (that | this): key(cmd-alt-k)
-mark list: key(cmd-alt-m)
-mark next: key(cmd-alt-.)
-mark prev: key(cmd-alt-,)
-# the below command will delete all bookmarks from all files
-mark delete: key(cmd-alt-\) 
+mark (that | this): user.vscode("bookmarks.toggle")
+mark list: user.vscode("bookmarks.listFromAllFiles")
+mark list file: user.vscode("bookmarks.list")
+mark next: user.vscode("bookmarks.jumpToNext")
+mark prev: user.vscode("bookmarks.jumpToPrevious")
+mark delete: user.vscode("bookmarks.clearFromAllFiles")
+mark delete file: user.vscode("bookmarks.clear")
 comment: key(cmd-/)
 insert doc comment: 
   insert("/**")
@@ -196,6 +197,7 @@ pilot select:
 pilot accept: user.vscode("inlineChat.acceptChanges")
 pilot focus: user.vscode("workbench.panel.chat.view.copilot.focus")
 pilot completions: user.vscode("github.copilot.completions.toggle")
+pilot allow: user.vscode("github.copilot.chat.allowInSession")
 
 # claude personal
 claud list: user.vscode("claudeVSCodeSessionsList.focus")
