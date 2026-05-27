@@ -1,10 +1,6 @@
 app: vscode
 -
 tag(): user.emoji
-# tag(): user.npm
-# tag(): user.yarn
-# tag(): user.git
-tag(): user.cursorless_experimental_snippets
 
 reveal [<user.text>]:
     user.vscode("workbench.action.showCommands")
