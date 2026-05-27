@@ -194,10 +194,8 @@ pilot select:
   user.vscode("workbench.panel.chat.view.copilot.focus")
   sleep(100ms)
   insert(text)
-pilot accept: user.vscode("inlineChat.acceptChanges")
 pilot focus: user.vscode("workbench.panel.chat.view.copilot.focus")
 pilot completions: user.vscode("github.copilot.completions.toggle")
-pilot allow: user.vscode("github.copilot.chat.allowInSession")
 
 # claude personal
 claud list: user.vscode("claudeVSCodeSessionsList.focus")
