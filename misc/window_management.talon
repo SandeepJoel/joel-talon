@@ -1,6 +1,9 @@
 window quit: key(cmd-q)
 window (many|mini) mice: key(cmd-m)
-window large: key(cmd-alt-=)
+window large:
+  user.menu_select("Window|Fill")
+window center:
+  user.menu_select("Window|Center")
 window fullscreen: key(cmd-ctrl-f)
 move point to <user.running_applications>: 
   user.switcher_focus(running_applications)
@@ -11,9 +14,7 @@ move center:
 ^portal$:
   user.launch_browser()
   user.mouse_move_center_active_window()
-# ^portal$:
-#   user.switcher_launch("/Applications/Comet.app")
-  # user.switcher_launch("/Applications/Firefox.app")
+
 ^finder$:
   user.switcher_launch("/System/Library/CoreServices/Finder.app")
 ^teams$:
