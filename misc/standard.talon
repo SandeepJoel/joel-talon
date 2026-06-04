@@ -27,13 +27,14 @@ brightness down: key(brightness_down)
   insert(user.text or "")
 
 
-# AI
-# ^travis: key(cmd-shift-q)
-# ^travis talk: key(alt-shift-v)
-# ^travis bye:
-#     key(escape escape)
-#     key(cmd-w)
-# ^travis toggle: key(alt-a)
+# AI global assistant
+^travis: 
+  speech.disable()
+  key(ctrl-alt-cmd-c)
+
+^whisper$:
+  key(fn-space)
+  speech.disable()
 
 ^gartner page:
   user.launch_browser()
@@ -50,69 +51,68 @@ brightness down: key(brightness_down)
   user.mouse_move_center_active_window()
   key(cmd-shift-a)
   sleep(100ms)
-  insert('https://gemini.google.com/app')
+  insert('gemini.google.com')
   key(enter)
 
-^gemini select:
+^gemini page select:
   text = edit.selected_text()
   user.launch_browser()
   user.mouse_move_center_active_window()
-  user.open_url_next_to_current('https://gemini.google.com/app')
+  user.open_url_next_to_current('gemini.google.com')
   sleep(2000ms)
   insert(text)
   key(enter)
 
-# Need to optimize and clean this further
-^gemini hunt [<user.text>]:
+^gemini page [<user.text>]:
   user.launch_browser()
   user.mouse_move_center_active_window()
   key(cmd-shift-a)
   sleep(100ms)
-  insert('https://gemini.google.com/app')
+  insert('gemini.google.com')
   key(enter)
   sleep(200ms)
   insert(user.text)
 
-^gemini new hunt [<user.text>]:
+^gemini hunt [<user.text>]:
   user.launch_browser()
   user.mouse_move_center_active_window()
-  user.open_url_next_to_current('https://gemini.google.com/app')
-  sleep(1000ms)
-  insert(user.text)
-
-^chat select:
-  text = edit.selected_text()
-  user.launch_browser()
-  user.mouse_move_center_active_window()
-  user.open_url_next_to_current('https://chatgpt.com/')  
-  sleep(1000ms)
-  insert(text)  
-
-^chat new hunt [<user.text>]:
-  user.launch_browser()
-  user.mouse_move_center_active_window()
-  user.open_url_next_to_current('https://chatgpt.com/')  
+  user.open_url_next_to_current('gemini.google.com')
   sleep(1000ms)
   insert(user.text)
 
 ^chat hunt [<user.text>]:
   user.launch_browser()
   user.mouse_move_center_active_window()
+  user.open_url_next_to_current('chatgpt.com')  
+  sleep(1000ms)
+  insert(user.text)
+
+^chat page [<user.text>]:
+  user.launch_browser()
+  user.mouse_move_center_active_window()
   key(cmd-shift-a)
   sleep(100ms)
-  insert('https://chatgpt.com/')
+  insert('chatgpt.com')
   key(enter)
   sleep(200ms)  
   insert(user.text)
+
+^chat page select:
+  text = edit.selected_text()
+  user.launch_browser()
+  user.mouse_move_center_active_window()
+  user.open_url_next_to_current('chatgpt.com')  
+  sleep(1000ms)
+  insert(text)  
 
 ^chat page:
   user.launch_browser()
   user.mouse_move_center_active_window()
   key(cmd-shift-a)
   sleep(100ms)
-  insert('https://chatgpt.com/')
+  insert('chatgpt.com')
   key(enter)
-
+  
   # maccy
 clip history: key(cmd-shift-m) 
 fly fast: key(escape escape)
@@ -139,9 +139,7 @@ key up: key(up)
 key left: key(left)
 key right: key(right)
 key tab: key(tab)
-^whisper$:
-  key(fn-space)
-  speech.disable()
+
 key(cmd-shift-space): speech.disable()
 
 clipboard history: key(ctrl-alt-cmd-m)

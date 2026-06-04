@@ -11,4 +11,5 @@ mode: sleep
     sleep(1500ms)
     edit.extend_word_left()
     edit.extend_word_left()
+    edit.extend_word_left()
     edit.delete()

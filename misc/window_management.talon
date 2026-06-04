@@ -20,6 +20,9 @@ move center:
 ^teams$:
   user.switcher_launch("/Applications/Microsoft Teams.app")
   user.mouse_move_center_active_window()
+^claude$:
+  user.switcher_launch("/Applications/Claude.app")
+  user.mouse_move_center_active_window()
 ^slack$:
   user.switcher_launch("/Applications/Slack.app")
   user.mouse_move_center_active_window()
