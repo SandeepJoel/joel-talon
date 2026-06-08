@@ -67,4 +67,6 @@ close tabs way right: key(alt-shift-r)
 close other tabs: key(alt-shift-w)
 toggle tab pin: key(ctrl-cmd-p)
 toggle tab numbers: key(ctrl-space)
-chrome talk: key(cmd-shift-.)
+chrome talk: 
+  speech.disable()
+  key(cmd-shift-.)

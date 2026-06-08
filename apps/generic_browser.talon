@@ -7,7 +7,7 @@ tag(): user.emoji
 [go] forward: 
   key(esc)
   browser.go_forward()
-go (back | backward): 
+go (back | backward):
   key(esc)
   browser.go_back()
 
