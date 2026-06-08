@@ -80,7 +80,7 @@ brightness down: key(brightness_down)
   sleep(1000ms)
   insert(user.text)
 
-^chat hunt [<user.text>]:
+^chat page [<user.text>]:
   user.launch_browser()
   user.mouse_move_center_active_window()
   user.open_url_next_to_current('chatgpt.com')  
@@ -241,7 +241,7 @@ repo next gen notification: "g-npm-nxtgen-notification-view"
 repo type ahead: "gsearch-typeahead"
 repo advanced search : "gsearch-advanced-search"
 repo inquiry: "g-npm-inquiry"
-repo ui: "g-npm-ui"
+repo you eye: "g-npm-ui"
 repo analytics: "g-npm-analytics"
 repo utils: "g-npm-utils"
 repo loading components: "g-npm-loading-components"
