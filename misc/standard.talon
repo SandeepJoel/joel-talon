@@ -124,9 +124,7 @@ brightness down: key(brightness_down)
   sleep(100ms)
   insert('chatgpt.com')
   key(enter)
-  
-  # maccy
-clip history: key(cmd-shift-m) 
+
 fly fast: key(escape escape)
 next line: key(escape down)
 wipe: key(backspace)
@@ -154,7 +152,8 @@ key tab: key(tab)
 
 key(cmd-shift-space): speech.disable()
 
-clipboard history: key(ctrl-alt-cmd-m)
+# TODO: Need to identify why the below command does not work
+# clipboard history: key(cmd:down space 4 cmd:up)
 
 # below commands for vimac 
 ^month time$: key(fn-f5)
@@ -233,6 +232,7 @@ full name kishore: 'Kishore'
 full name Kusuma: 'Kusuma Goli'
 full name chandira: 'Chandira'
 full name senthil: 'Senthil'
+full name Shubhanshu: 'Shubhanshu'
 mobile joel: '9445484948'
 mobile thomas: '9841875021'
 address joel: 'No. 51, 12 street, astalakshmi nagar, alapakkam, chennai 116'
