@@ -57,6 +57,18 @@ brightness down: key(brightness_down)
 ^gemini page select:
   text = edit.selected_text()
   user.launch_browser()
+  sleep(100ms)
+  user.mouse_move_center_active_window()
+  key(cmd-shift-a)
+  sleep(100ms)
+  insert('gemini.google.com')
+  sleep(300ms)
+  insert(text)
+  key(enter)
+
+^gemini hunt select:
+  text = edit.selected_text()
+  user.launch_browser()
   user.mouse_move_center_active_window()
   user.open_url_next_to_current('gemini.google.com')
   sleep(2000ms)

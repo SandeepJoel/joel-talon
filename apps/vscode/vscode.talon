@@ -155,6 +155,7 @@ file hunt current folder:
 
 
 git stash apply: user.vscode("git.stashApply")
+git stash list: user.vscode("gitlens.git.stash.list")
 switch term: user.vscode("workbench.action.terminal.focus")
 switch code: user.vscode("workbench.action.focusActiveEditorGroup")
 # turbo log: user.vscode("turboConsoleLog.insertConsoleLog")
