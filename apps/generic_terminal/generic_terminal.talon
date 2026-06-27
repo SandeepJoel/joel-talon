@@ -6,6 +6,10 @@ tag(): user.git
 tag(): user.gh
 # tag(): find_and_replace
 
+ollama list: "ollama list\n"
+ollama run: "ollama run "
+ollama ps: "ollama ps\n"
+
 kill that:
   key(ctrl-c)
 search:

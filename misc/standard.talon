@@ -61,19 +61,9 @@ brightness down: key(brightness_down)
   user.mouse_move_center_active_window()
   key(cmd-shift-a)
   sleep(100ms)
-  insert('gemini.google.com')
-  sleep(300ms)
-  insert(text)
+  insert('gemini.google.com')  
   key(enter)
-
-^gemini hunt select:
-  text = edit.selected_text()
-  user.launch_browser()
-  user.mouse_move_center_active_window()
-  user.open_url_next_to_current('gemini.google.com')
-  sleep(2000ms)
   insert(text)
-  key(enter)
 
 ^gemini page [<user.text>]:
   user.launch_browser()
@@ -85,6 +75,15 @@ brightness down: key(brightness_down)
   sleep(200ms)
   insert(user.text)
 
+^gemini hunt select:
+  text = edit.selected_text()
+  user.launch_browser()
+  user.mouse_move_center_active_window()
+  user.open_url_next_to_current('gemini.google.com')
+  sleep(1500ms)
+  insert(text)
+  key(enter)
+
 ^gemini hunt [<user.text>]:
   user.launch_browser()
   user.mouse_move_center_active_window()
@@ -95,33 +94,24 @@ brightness down: key(brightness_down)
 ^chat page [<user.text>]:
   user.launch_browser()
   user.mouse_move_center_active_window()
-  user.open_url_next_to_current('chatgpt.com')  
-  sleep(1000ms)
-  insert(user.text)
-
-^chat page [<user.text>]:
-  user.launch_browser()
-  user.mouse_move_center_active_window()
   key(cmd-shift-a)
-  sleep(100ms)
   insert('chatgpt.com')
   key(enter)
-  sleep(200ms)  
   insert(user.text)
 
 ^chat page select:
   text = edit.selected_text()
   user.launch_browser()
   user.mouse_move_center_active_window()
-  user.open_url_next_to_current('chatgpt.com')  
-  sleep(1000ms)
-  insert(text)  
+  key(cmd-shift-a)
+  insert('chatgpt.com')
+  key(enter)
+  insert(user.text)  
 
 ^chat page:
   user.launch_browser()
   user.mouse_move_center_active_window()
   key(cmd-shift-a)
-  sleep(100ms)
   insert('chatgpt.com')
   key(enter)
 
