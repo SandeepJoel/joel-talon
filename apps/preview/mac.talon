@@ -3,4 +3,4 @@ app: Preview
 -
 
 settings():
-    user.mouse_continuous_scroll_amount = 30
+    user.mouse_continuous_scroll_amount = 40

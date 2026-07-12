@@ -14,10 +14,10 @@ face(pucker_lips_left:stop):
 # face(presence:stop): 
 #   print("p - False")
 
-# key(shift-ctrl-f): mode.enable('face')
-# key(shift-ctrl-h): mode.disable('face')
-enable face mode: mode.enable('face')
-disable face mode: mode.disable('face')
+key(shift-ctrl-f): mode.enable('face')
+key(shift-ctrl-r): mode.disable('face')
+enable face: mode.enable('face')
+disable face: mode.disable('face')
 
 # Never gets triggered at all
 # face(stick_out_tongue):
