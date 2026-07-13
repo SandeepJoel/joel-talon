@@ -196,10 +196,12 @@ pilot completions: user.vscode("github.copilot.completions.toggle")
 
 # claude personal
 claud list: user.vscode("claudeVSCodeSessionsList.focus")
-claud chat: user.vscode("claude-vscode.sidebar.open")
-claud focus: user.vscode("claude-vscode.sidebar.open")
+claud (chat | focus): user.vscode("claude-vscode.sidebar.open")
 # claud new: user.vscode("workbench.action.chat.openNewSessionEditor.claude-code")
 claud new: user.vscode("claude-vscode.window.open")
+claud talk: 
+  speech.disable()
+  key(cmd-d)
 claud hunt [<user.text>]: 
   user.vscode("claude-vscode.sidebar.open")
   sleep(100ms)

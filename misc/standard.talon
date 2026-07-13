@@ -91,6 +91,52 @@ brightness down: key(brightness_down)
   sleep(1000ms)
   insert(user.text)
 
+^claude page:
+  user.launch_browser()
+  sleep(100ms)
+  user.mouse_move_center_active_window()
+  key(cmd-shift-a)
+  sleep(100ms)
+  insert('claude.ai')
+  key(enter)
+
+^claude page select:
+  text = edit.selected_text()
+  user.launch_browser()
+  sleep(100ms)
+  user.mouse_move_center_active_window()
+  key(cmd-shift-a)
+  sleep(100ms)
+  insert('claude.ai')
+  key(enter)
+  insert(text)
+
+^claude page [<user.text>]:
+  user.launch_browser()
+  user.mouse_move_center_active_window()
+  key(cmd-shift-a)
+  sleep(100ms)
+  insert('claude.ai')
+  key(enter)
+  sleep(200ms)
+  insert(user.text)
+
+^claude hunt select:
+  text = edit.selected_text()
+  user.launch_browser()
+  user.mouse_move_center_active_window()
+  user.open_url_next_to_current('claude.ai')
+  sleep(1500ms)
+  insert(text)
+  key(enter)
+
+^claude hunt [<user.text>]:
+  user.launch_browser()
+  user.mouse_move_center_active_window()
+  user.open_url_next_to_current('claude.ai')
+  sleep(1000ms)
+  insert(user.text)
+
 ^chat page [<user.text>]:
   user.launch_browser()
   user.mouse_move_center_active_window()
