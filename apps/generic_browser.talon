@@ -50,26 +50,6 @@ open here {user.website}:
    sleep(500ms)
    key(enter)
 
-blind that: 
-  term = edit.selected_text()
-  user.open_url('https://www.teamblind.com/search/' + '{term}')
-
-blind hunt <user.text>: 
-  user.open_url("https://www.teamblind.com/search/{user.text}")
-
-glass door that:
-  text = edit.selected_text()
-  user.search_with_search_engine("https://www.google.com/search?q=%s", "glassdoor {text}")
-
-glass door hunt <user.text>: 
-  user.open_url("https://www.google.com/search?q=glassdoor {user.text}")
-
-github hunt <user.text>: 
-  user.open_url("https://github.com/search?q={user.text}&type=repositories")
-
-youtube hunt <user.text>: 
-  user.open_url("https://www.youtube.com/results?search_query={user.text}")
-
 youtube here <user.text>:
   browser.focus_address()
   insert('https://www.youtube.com/results?search_query={user.text}')

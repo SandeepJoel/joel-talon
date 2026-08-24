@@ -14,7 +14,6 @@ go to chat: key(super-2)
 # go to teams: key(super-3)
 go to calendar: key(super-3)
 go to helpdesk: key(super-6)
-go to inside gartner: key(super-7)
 go to onedrive: key(super-5)
 
 file upload:

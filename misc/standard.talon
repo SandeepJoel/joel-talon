@@ -178,7 +178,37 @@ end ten: key(enter)
 # letter search: key(cmd-shift-o) 
 # letter scroll: key(cmd-shift-j) 
 
+^whatsapp page:
+  user.launch_browser()
+  sleep(100ms)
+  user.mouse_move_center_active_window()
+  key(cmd-shift-a)
+  sleep(100ms)
+  insert('web.whatsapp.com')
+  key(enter)
 
+blind that: 
+  term = edit.selected_text()
+  user.open_url('https://www.teamblind.com/search/' + '{term}')
+
+blind hunt <user.text>: 
+  user.open_url("https://www.teamblind.com/search/{user.text}")
+
+glass door that:
+  text = edit.selected_text()
+  user.search_with_search_engine("https://www.google.com/search?q=%s", "glassdoor {text}")
+
+glass door hunt <user.text>: 
+  user.open_url("https://www.google.com/search?q=glassdoor {user.text}")
+
+github hunt <user.text>: 
+  user.open_url("https://github.com/search?q={user.text}&type=repositories")
+
+youtube hunt <user.text>: 
+  user.open_url("https://www.youtube.com/results?search_query={user.text}")
+
+reddit hunt <user.text>:
+  user.open_url("https://www.reddit.com/search/?q={user.text}")
 
 key down: key(down)
 key up: key(up)
@@ -250,12 +280,10 @@ unhide files: key(cmd-shift-.)
 # screen color switch: key(ctrl-alt-cmd-8)
 
 email personal: 'joeltheking00000001@gmail.com'
-email gartner: 'asandeep.joel@gartner.com'
 email old reader: 'automation.gcom.INVWEBPM10@alphabet.com'
 email official: 'sandeepjoelofficial@gmail.com'
 email joel code: 'joelcode001@gmail.com'
 email temporary: 'mougroibagrureu-1592@yopmail.com'
-email manager: 'vijayaprasad.sundarasamy@gartner.com'
 full name joel: 'A Sandeep Joel'
 full name christina: 'Christina D'
 full name anand: 'Anand Edward'
@@ -269,6 +297,12 @@ full name Kusuma: 'Kusuma Goli'
 full name chandira: 'Chandira'
 full name senthil: 'Senthil'
 full name Shubhanshu: 'Shubhanshu'
+name nithish: 'Nithish'
+name srinivasan: 'Srinivasan'
+name siwalik: 'Siwalik'
+name Bharath: 'Bharath'
+name Manoj: 'Manoj Krishnan'
+name prakash: 'Prakash freshdesk'
 mobile joel: '9445484948'
 mobile thomas: '9841875021'
 address joel: 'No. 51, 12 street, astalakshmi nagar, alapakkam, chennai 116'
