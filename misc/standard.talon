@@ -36,15 +36,6 @@ brightness down: key(brightness_down)
   key(fn-space)
   speech.disable()
 
-^gartner page:
-  user.launch_browser()
-  sleep(100ms)
-  user.mouse_move_center_active_window()
-  key(cmd-shift-a)
-  sleep(100ms)
-  insert('chat.gartner.com')
-  key(enter)
-
 ^gemini page:
   user.launch_browser()
   sleep(100ms)
